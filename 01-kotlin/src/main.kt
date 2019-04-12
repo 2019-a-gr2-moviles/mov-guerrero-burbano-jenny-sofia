@@ -59,12 +59,27 @@ fun main(args:Array<String>){
         println("$index. $nota")
     }
     val respuestaFilter=notas.filter {
-        it>2
+        it in 2..4
 
+    }.map {
+        it * 2
     }
     respuestaFilter.forEach{
         println(it)
     }
+    val novias = arrayListOf(1,2,2,3,4,5)
+    val respuestaNovioia: Boolean=novias.any{
+        it==7
+    }
+    val tazos= arrayListOf(1,2,3,4,5,6,7)
+    val RespuestaTazos=tazos.all {
+        it>1
+    }
+    val totalTazos=tazos.reduce{
+        valorAcumulador, tazo->
+            valorAcumulador+ tazo
+    }
+    println(totalTazos)
 
 }
 fun estaJalado(nota:Double){
