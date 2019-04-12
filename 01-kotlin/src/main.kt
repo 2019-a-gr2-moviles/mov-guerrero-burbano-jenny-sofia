@@ -25,6 +25,11 @@ fun main(args:Array<String>){
     estaJalado(10.0)
     estaJalado(0.0)
 
+
+
+
+
+    s
 }
 fun estaJalado(nota:Double){
     when (nota){
