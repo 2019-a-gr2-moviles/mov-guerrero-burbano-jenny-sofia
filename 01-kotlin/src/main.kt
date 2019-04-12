@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main(args:Array<String>){
 
     println("hellow world")
@@ -24,12 +26,39 @@ fun main(args:Array<String>){
     estaJalado(7.0)
     estaJalado(10.0)
     estaJalado(0.0)
+    holaMundo("holaaaa")
+    holaMundoAvanzado(2345678)
+    println(sumardosnumero(1,4))
+    val arregloCumpleanos= intArrayOf(1,2,3,4)
+    val arregloTodo= arrayOf(1,"asd", 10.2, true)
+    arregloCumpleanos[0]=4
+    println(arregloCumpleanos[0])
+    arregloCumpleanos.set(1,5)
+    val date= Date()
+    var notas= arrayListOf(1,2,3,4,5)
+    val notasDos=notas.map { nota->
 
 
+        val modulo = nota % 2
+        val esPar = 0
+        when (modulo) {
+            esPar -> {
+                nota + 1
+            }
+            else -> {
+                nota + 2
+            }
+        }
+    }
+    notasDos.forEach{
+        println(it)
+    }
+    notas.forEachIndexed() {
+        index, nota:Int->
 
+        println("$index. $nota")
+    }
 
-
-    s
 }
 fun estaJalado(nota:Double){
     when (nota){
@@ -48,3 +77,14 @@ fun estaJalado(nota:Double){
         }
     }
 }
+fun holaMundo(mensaje:String){
+    println("Mensaje: $mensaje")
+}
+fun holaMundoAvanzado(mensaje:Any):Unit{
+    println("Mensaje: $mensaje")
+}
+fun sumardosnumero(numUno:Int, numDos:Int):Int{
+    return numUno + numDos
+
+}
+
