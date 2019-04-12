@@ -58,6 +58,13 @@ fun main(args:Array<String>){
 
         println("$index. $nota")
     }
+    val respuestaFilter=notas.filter {
+        it>2
+
+    }
+    respuestaFilter.forEach{
+        println(it)
+    }
 
 }
 fun estaJalado(nota:Double){
