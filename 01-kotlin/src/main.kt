@@ -80,6 +80,7 @@ fun main(args:Array<String>){
             valorAcumulador+ tazo
     }
     println(totalTazos)
+    val n= Numero("2")
 
 }
 fun estaJalado(nota:Double){
@@ -110,3 +111,69 @@ fun sumardosnumero(numUno:Int, numDos:Int):Int{
 
 }
 
+
+class Usuario(val cedula:String){
+    public var nombre: String = ""
+    public var apellido:String="";
+
+    constructor(cedula:String,apellido:String):this(cedula){
+
+        this.apellido=apellido
+    }
+
+}
+class UsuarioKT(public var nombre: String, public val apellido: String, protected var id: Int){
+    fun hola():String{
+        return this.apellido
+    }
+    private fun hola2(){
+
+    }
+    private fun hola3(){
+
+    }
+    companion object {
+        val gravedad= 10.5
+        fun correr(){
+            println("Estoy corriendo en $gravedad")
+
+        }
+    }
+}
+fun aa(){
+    UsuarioKT.gravedad
+    UsuarioKT.correr()
+
+}
+fun a() {
+
+    var adrian = UsuarioKT("a", "b", 2);
+    adrian.nombre= "sofi";
+}
+class Numero(var numero:Int){
+    constructor(numeroString:String):this(numeroString.toInt()){ // la clase recibe tanto enteros como strings
+        println("contructuor")
+    }
+    init{
+        println("Init")
+    }
+}
+abstract class Numeros (var numeroUno:Int, var numeroDos:Int){
+
+}
+class Suma( num1:Int,  num2:Int):Numeros(num1, num2){
+
+}
+fun cc(){
+    val a= Suma(1,2)
+   // val b= Numeros(1,3)
+
+
+}
+fun presley(requerido: Int, opcional:Int= 1, nulo: Int?){
+
+}
+fun cddd(){
+    presley(1,3,4) //Name parameters
+    presley(7,2,3)
+}
