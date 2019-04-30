@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="Commit 3 clase 4" />
+    <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="Commit 3 clase 4">
+      <change afterPath="$PROJECT_DIR$/../Deber1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="152" column="29" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+            <state relative-caret-position="510">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -58,30 +63,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1913" />
-    <option name="width" value="515" />
-    <option name="height" value="735" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="01-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="01-kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -141,7 +133,9 @@
       <workItem from="1556400534225" duration="522000" />
       <workItem from="1556401882123" duration="2573000" />
       <workItem from="1556577644652" duration="1321000" />
-      <workItem from="1556588886682" duration="1487000" />
+      <workItem from="1556588886682" duration="1679000" />
+      <workItem from="1556638253355" duration="1126000" />
+      <workItem from="1556659118087" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="Commit desde intellig">
       <created>1555101902440</created>
@@ -161,11 +155,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5903000" />
+    <option name="totallyTimeSpent" value="7274000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" weight="0.5259027" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
@@ -252,8 +245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="152" column="29" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+        <state relative-caret-position="510">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
         </state>
       </provider>
     </entry>
