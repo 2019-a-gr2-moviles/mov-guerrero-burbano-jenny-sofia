@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="Commit 3 clase 4">
-      <change afterPath="$PROJECT_DIR$/../Deber1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ffff.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ffff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,16 +28,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/ejemplo/MainKt.class">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state relative-caret-position="143">
+              <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
+              <folding>
+                <element signature="e#879#1313#2" />
+                <element signature="n#!!block;n#mostrarMenu#0" />
+                <element signature="e#2207#2224#2" />
+                <element signature="n#!!block;n#actualizarDB#0" />
+                <element signature="e#2458#3077#1" />
+                <element signature="e#2534#3040#2" />
+                <element signature="e#2571#2809#1" />
+                <element signature="e#2815#3029#1" />
+                <element signature="e#3083#3238#1" />
+                <element signature="e#3258#3358#0" />
+                <element signature="n#!!block;n#eliminarElmento#0" />
+                <element signature="n#!!block;n#actualizarElmento#0" />
+                <element signature="n#!!block;n#añadirElmento#0" />
+                <element signature="n#!!block;n#Plato#0" />
+                <element signature="n#!!block;n#muestraContenido#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ffff.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ffff.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Collections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75480">
+              <caret line="4846" column="20" selection-start-line="4846" selection-start-column="20" selection-end-line="4846" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/archivo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="46" selection-start-column="46" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -47,8 +94,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,6 +105,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/ffff.java" />
+        <option value="$PROJECT_DIR$/src/archivo.txt" />
+        <option value="$PROJECT_DIR$/src/ffff.form" />
         <option value="$PROJECT_DIR$/src/main.kt" />
       </list>
     </option>
@@ -73,20 +123,39 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Deber1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Deber1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Deber1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Deber1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deber1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -131,11 +200,14 @@
       <option name="presentableId" value="Default" />
       <updated>1555012645558</updated>
       <workItem from="1556400534225" duration="522000" />
-      <workItem from="1556401882123" duration="2573000" />
-      <workItem from="1556577644652" duration="1321000" />
-      <workItem from="1556588886682" duration="1679000" />
-      <workItem from="1556638253355" duration="1126000" />
-      <workItem from="1556659118087" duration="53000" />
+      <workItem from="1556401882123" duration="2387000" />
+      <workItem from="1556404776977" duration="2164000" />
+      <workItem from="1556577644102" duration="42000" />
+      <workItem from="1556578368128" duration="2975000" />
+      <workItem from="1556589126450" duration="15952000" />
+      <workItem from="1556633113144" duration="6691000" />
+      <workItem from="1556659204931" duration="1194000" />
+      <workItem from="1556660717160" duration="1130000" />
     </task>
     <task id="LOCAL-00001" summary="Commit desde intellig">
       <created>1555101902440</created>
@@ -151,16 +223,38 @@
       <option name="project" value="LOCAL" />
       <updated>1555102814551</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Deber 1, escritura archivo">
+      <created>1556581636507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556581636508</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Delete probrado.">
+      <created>1556605738088</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556605738088</updated>
+    </task>
+    <task id="LOCAL-00005" summary="funcion actulizacionElemento casi terminada">
+      <created>1556607521795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556607521795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7274000" />
+    <option name="totallyTimeSpent" value="33057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" weight="0.5259027" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.15503356" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -170,15 +264,15 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3291536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983364" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27903682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3243626" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -191,38 +285,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.5259027" />
-      <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Resources Explorer" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3291536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983364" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -230,7 +292,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit desde intellig" />
     <MESSAGE value="Commit 3 clase 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 3 clase 4" />
+    <MESSAGE value="Deber 1, escritura archivo" />
+    <MESSAGE value="Delete probrado." />
+    <MESSAGE value="funcion actulizacionElemento casi terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="funcion actulizacionElemento casi terminada" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.java">
@@ -241,12 +306,60 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/ejemplo/MainKt.class">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ffff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ffff.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75480">
+          <caret line="4846" column="20" selection-start-line="4846" selection-start-column="20" selection-end-line="4846" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/archivo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="46" selection-start-column="46" selection-end-column="46" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="143">
+          <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
+          <folding>
+            <element signature="e#879#1313#2" />
+            <element signature="n#!!block;n#mostrarMenu#0" />
+            <element signature="e#2207#2224#2" />
+            <element signature="n#!!block;n#actualizarDB#0" />
+            <element signature="e#2458#3077#1" />
+            <element signature="e#2534#3040#2" />
+            <element signature="e#2571#2809#1" />
+            <element signature="e#2815#3029#1" />
+            <element signature="e#3083#3238#1" />
+            <element signature="e#3258#3358#0" />
+            <element signature="n#!!block;n#eliminarElmento#0" />
+            <element signature="n#!!block;n#actualizarElmento#0" />
+            <element signature="n#!!block;n#añadirElmento#0" />
+            <element signature="n#!!block;n#Plato#0" />
+            <element signature="n#!!block;n#muestraContenido#0" />
+          </folding>
         </state>
       </provider>
     </entry>
