@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="Commit 3 clase 4">
-      <change afterPath="$PROJECT_DIR$/../Deber1/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deber1/src/ffff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/Plato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/Plato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/out/production/ejemplo/archivo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/src/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/src/archivo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deber1/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Deber1/src/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +38,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="-714">
               <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
             </state>
           </provider>
@@ -63,10 +65,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -79,7 +81,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deber1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -136,6 +138,7 @@
       <workItem from="1556588886682" duration="1679000" />
       <workItem from="1556638253355" duration="1126000" />
       <workItem from="1556659118087" duration="53000" />
+      <workItem from="1557012205116" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="Commit desde intellig">
       <created>1555101902440</created>
@@ -155,10 +158,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7274000" />
+    <option name="totallyTimeSpent" value="7284000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" weight="0.5259027" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
@@ -245,7 +249,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="-714">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
         </state>
       </provider>

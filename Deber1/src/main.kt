@@ -1,3 +1,4 @@
+import java.awt.Dimension
 import java.io.*
 import java.util.*
 import javax.swing.JOptionPane
@@ -19,23 +20,20 @@ import javax.swing.*
 import java.awt.event.ActionEvent
 import javax.swing.table.DefaultTableModel
 
+val ruta = "src/archivo.txt"
+val archivo = File(ruta)
 
+
+
+var cadena: String = ""
+val f = FileReader(archivo)
+val b = BufferedReader(f)
+val dbPlatos = ArrayList<Plato>()
 fun main(args: Array<String>) {
-
-
-    val ruta = "src/archivo.txt"
-    val archivo = File(ruta)
-    val bw: BufferedWriter
-
-
-    var cadena: String = ""
-    val f = FileReader(archivo)
-    val b = BufferedReader(f)
-    val dbPlatos = ArrayList<Plato>()
-
     try {
+        val bw: BufferedWriter
         cadena = b.readLine()
-
+        var tempIndex=-1
         println(cadena)
         val separados = cadena.split(';')
 
@@ -54,28 +52,26 @@ fun main(args: Array<String>) {
 
             dbPlatos.add(platoTemp)
         }
-        val p = JPanel()
-        val dtm =
-            DefaultTableModel(arrayOf(arrayOf("1", "2", "3"), arrayOf("Id", "Nombre", "Precio")), arrayOf("Names", "In", "Order"))
-        dbPlatos.forEach{ element ->
-                var arrayTemp= arrayOf(element.idPlato, element.nombre, element.tipo, element.precio)
-                dtm.addRow(arrayTemp)
+        var mostrarMen=0
+       do{
+            mostrarMen=mostrarMenu(dbPlatos)
+           when(mostrarMen){
+               1->
+                   mostrarPlatos(dbPlatos)
+               2->
+                   ingresarPlato(dbPlatos)
+               3-> {
+                   tempIndex=mostrarPlatos(dbPlatos);
+                   actualizarElmento(dbPlatos,tempIndex)
+               }
 
+               4-> {
+                   tempIndex = mostrarPlatos(dbPlatos);
+                   eliminarElmento(dbPlatos, tempIndex)
+               }
+           }
+       }while (mostrarMen!= 5)
 
-        }
-        dtm.removeRow(0)
-
-
-
-        val tabla = JTable(dtm)
-        tabla.createDefaultColumnsFromModel()
-        p.add(tabla)
-
-        JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
-        actualizarElmento(dbPlatos, 0)
-        //eliminarElmento(dbPlatos, 0)
-        //println(dbPlatos)
-        //actualizarDB(dbPlatos)
     } catch (e: IllegalStateException) {
         actualizarElmento(dbPlatos, 0)
         print("No existen datos almacenados")
@@ -89,11 +85,54 @@ fun main(args: Array<String>) {
 
 }
 
-fun mostrarMenu(dbPlatos: ArrayList<Plato>) {
-    dbPlatos.forEach { item ->
-
+fun mostrarPlatos(dbPlatos: ArrayList<Plato>):Int{
+    val idPlato = JTextField(10)
+    val p = JPanel()
+    val dtm =
+        DefaultTableModel(arrayOf(arrayOf("Id", "Nombre", "Precio")), arrayOf("Names", "In", "Order"))
+    dbPlatos.forEach{ element ->
+        var arrayTemp= arrayOf(element.idPlato, element.nombre, element.tipo, element.precio)
+        dtm.addRow(arrayTemp)
 
     }
+    dtm.removeRow(0)
+    val tabla = JTable(dtm)
+    tabla.createDefaultColumnsFromModel()
+    tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+    p.add(tabla)
+
+
+    JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
+  //  actualizarElmento(dbPlatos, 0)
+    //eliminarElmento(dbPlatos, 0)
+    //println(dbPlatos)
+    //actualizarDB(dbPlatos)
+    return tabla.selectedRow
+}
+fun mostrarMenu(dbPlatos: ArrayList<Plato>):Int {
+    val idPlato = JTextField(10)
+    val p = JPanel()
+    val dtm =
+        DefaultTableModel(arrayOf(arrayOf("Índice", "Opcion"), arrayOf("1.-",
+            "Ver platos "),arrayOf("2.-", "Ingresar"), arrayOf("3.-", "Editar"),arrayOf("4.-", "Eliminar"),arrayOf("5.-", "Salir")), arrayOf("Names", "In"))
+
+    val tabla = JTable(dtm)
+    tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+    tabla.createDefaultColumnsFromModel()
+    p.add(tabla)
+
+
+
+
+
+    JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
+
+    //eliminarElmento(dbPlatos, 0)
+    //println(dbPlatos)
+    //actualizarDB(dbPlatos)
+    println( "--"+ tabla.selectedColumn+ "g--"+ tabla.selectedRow);
+    return tabla.selectedRow
 }
 
 fun actualizarDB(dbPlatos: ArrayList<Plato>) {
@@ -139,6 +178,39 @@ fun eliminarElmento(dbPlatos: ArrayList<Plato>, index: Int) {
     var platoTemp: Plato = dbPlatos[index]
     dbPlatos.remove(platoTemp)
     actualizarDB(dbPlatos)
+}
+fun ingresarPlato(dbPlatos: ArrayList<Plato>){
+    val p = JPanel()
+    val id = JTextField(10)
+    val nombre = JTextField(10)
+    val tipo = JTextField(10)
+    val precio = JTextField(10)
+    val name = JButton("Name")
+    // val texto:String = "salto de linea \n hola"
+
+    //  println(texto)
+    //var platoTemp:Plato=dbPlatos[index]
+    p.add(JLabel("Identificador :"))
+    p.add(id)
+    p.add(JLabel("Nombre :"))
+    p.add(nombre)
+    p.add(JLabel("Tipo :  "))
+    p.add(tipo)
+    p.add(JLabel("Precio : "))
+    p.add(precio)
+
+
+    JOptionPane.showConfirmDialog(null, p, "ACTUALIZACIÓN DE PLATO : ", JOptionPane.OK_CANCEL_OPTION);
+    val platoTemp = Plato(
+        idPlato = id.text,
+        nombre = nombre.text,
+        tipo = tipo.text,
+        precio = precio.text.toDouble()
+    )
+    dbPlatos.add(platoTemp)
+
+    actualizarDB(dbPlatos)
+
 }
 
 fun actualizarElmento(dbPlatos: ArrayList<Plato>, index: Int) {
