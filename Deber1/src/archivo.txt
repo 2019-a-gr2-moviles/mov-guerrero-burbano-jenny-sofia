@@ -1,1 +1,1 @@
-1,fetuchine,italiana,13.25;2,fritada,ecuatoriana,8.5
+1,lasaña,italiana,13.25;2,fritada,peruana,8.5

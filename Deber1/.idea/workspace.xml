@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="mostrar datos terminado">
+      <change beforePath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ejemplo/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ejemplo/Plato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/Plato.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ejemplo/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/archivo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/archivo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,24 +31,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-242">
-              <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+            <state relative-caret-position="306">
+              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
               <folding>
-                <element signature="e#879#1313#2" />
+                <element signature="n#!!block;n#mostrarPlatos#0" />
                 <element signature="n#!!block;n#mostrarMenu#0" />
-                <element signature="e#2207#2224#2" />
                 <element signature="n#!!block;n#actualizarDB#0" />
-                <element signature="e#2458#3077#1" />
-                <element signature="e#2534#3040#2" />
-                <element signature="e#2571#2809#1" />
-                <element signature="e#2815#3029#1" />
-                <element signature="e#3083#3238#1" />
-                <element signature="e#3258#3358#0" />
                 <element signature="n#!!block;n#eliminarElmento#0" />
-                <element signature="n#!!block;n#actualizarElmento#0" />
                 <element signature="n#!!block;n#añadirElmento#0" />
                 <element signature="n#!!block;n#Plato#0" />
                 <element signature="n#!!block;n#muestraContenido#0" />
@@ -71,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Collections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75480">
-              <caret line="4846" column="20" selection-start-line="4846" selection-start-column="20" selection-end-line="4846" selection-end-column="20" />
+            <state relative-caret-position="75038">
+              <caret line="4816" column="64" selection-start-line="4816" selection-start-column="64" selection-end-line="4817" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/archivo.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="46" selection-start-column="46" selection-end-column="46" />
+              <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -110,9 +108,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -144,7 +143,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../01-kotlin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -203,7 +202,8 @@
       <workItem from="1556589126450" duration="15952000" />
       <workItem from="1556633113144" duration="6691000" />
       <workItem from="1556659204931" duration="1194000" />
-      <workItem from="1556660717160" duration="2495000" />
+      <workItem from="1556660717160" duration="4406000" />
+      <workItem from="1556989138833" duration="10929000" />
     </task>
     <task id="LOCAL-00001" summary="Commit desde intellig">
       <created>1555101902440</created>
@@ -251,13 +251,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34422000" />
+    <option name="totallyTimeSpent" value="47262000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.15503356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.17700455" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -267,7 +267,7 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27903682" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2782324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,7 +275,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3243626" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32405892" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -302,13 +302,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="mostrar datos terminado" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/ejemplo/MainKt.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -331,39 +324,38 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75480">
-          <caret line="4846" column="20" selection-start-line="4846" selection-start-column="20" selection-end-line="4846" selection-end-column="20" />
+        <state relative-caret-position="75038">
+          <caret line="4816" column="64" selection-start-line="4816" selection-start-column="64" selection-end-line="4817" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#mostrarPlatos#0" />
+            <element signature="n#!!block;n#mostrarMenu#0" />
+            <element signature="n#!!block;n#actualizarDB#0" />
+            <element signature="n#!!block;n#eliminarElmento#0" />
+            <element signature="n#!!block;n#añadirElmento#0" />
+            <element signature="n#!!block;n#Plato#0" />
+            <element signature="n#!!block;n#muestraContenido#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/archivo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="46" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-          <folding>
-            <element signature="e#879#1313#2" />
-            <element signature="n#!!block;n#mostrarMenu#0" />
-            <element signature="e#2207#2224#2" />
-            <element signature="n#!!block;n#actualizarDB#0" />
-            <element signature="e#2458#3077#1" />
-            <element signature="e#2534#3040#2" />
-            <element signature="e#2571#2809#1" />
-            <element signature="e#2815#3029#1" />
-            <element signature="e#3083#3238#1" />
-            <element signature="e#3258#3358#0" />
-            <element signature="n#!!block;n#eliminarElmento#0" />
-            <element signature="n#!!block;n#actualizarElmento#0" />
-            <element signature="n#!!block;n#añadirElmento#0" />
-            <element signature="n#!!block;n#Plato#0" />
-            <element signature="n#!!block;n#muestraContenido#0" />
-          </folding>
+          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>
