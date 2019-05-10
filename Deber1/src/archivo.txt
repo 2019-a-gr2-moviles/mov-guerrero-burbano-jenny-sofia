@@ -1,1 +1,1 @@
-1,lasaña,italiana,13.25;2,fritada,peruana,8.5
+2,FRITADA,PERUANA,8.53;4,ALBÓNDIGAS,ITALIA,23.59
