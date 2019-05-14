@@ -78,8 +78,6 @@ fun main(args: Array<String>) {
     }
 
 
-    // bw = BufferedWriter(FileWriter(archivo));
-    // bw.write("holaaaa.");
 
     //  b.close()
 
@@ -93,20 +91,12 @@ fun mostrarPlatos(dbPlatos: ArrayList<Plato>):Int{
     dbPlatos.forEach{ element ->
         var arrayTemp= arrayOf( element.nombre, element.tipo, element.precio)
         dtm.addRow(arrayTemp)
-
     }
-
     val tabla = JTable(dtm)
     tabla.createDefaultColumnsFromModel()
     tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     p.add(tabla)
-
-
     JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
-  //  actualizarElmento(dbPlatos, 0)
-    //eliminarElmento(dbPlatos, 0)
-    //println(dbPlatos)
-    //actualizarDB(dbPlatos)
     return tabla.selectedRow
 }
 fun mostrarMenu(dbPlatos: ArrayList<Plato>):Int {
@@ -121,16 +111,7 @@ fun mostrarMenu(dbPlatos: ArrayList<Plato>):Int {
 
     tabla.createDefaultColumnsFromModel()
     p.add(tabla)
-
-
-
-
-
     JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
-
-    //eliminarElmento(dbPlatos, 0)
-    //println(dbPlatos)
-    //actualizarDB(dbPlatos)
     println( "--"+ tabla.selectedColumn+ "g--"+ tabla.selectedRow);
     return tabla.selectedRow
 }

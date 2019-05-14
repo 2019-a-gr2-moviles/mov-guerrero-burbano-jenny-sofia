@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1806c307-9fa0-41a1-b264-64a33e580843" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../03-Android/app/src/main/res/values-land/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-Android/app/src/main/res/values-land/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03-Android/app/src/main/res/values-land/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-Android/app/src/main/res/values-land/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ejemplo/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ejemplo/Plato.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/Plato.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ejemplo/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ejemplo/archivo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/archivo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/archivo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Def/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Def/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Def/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Def/app/src/main/res/values-land/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Def/app/src/main/res/values-land/strings.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,32 +38,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="165">
+              <caret line="213" column="17" selection-start-line="213" selection-start-column="17" selection-end-line="213" selection-end-column="17" />
               <folding>
+                <element signature="e#0#514#0" expanded="true" />
+                <element signature="e#906#1340#2" />
                 <element signature="n#!!block;n#añadirElmento#0" />
                 <element signature="n#!!block;n#Plato#0" />
                 <element signature="n#!!block;n#muestraContenido#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ffff.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ffff.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -97,17 +86,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ffff.java" />
-        <option value="$PROJECT_DIR$/src/archivo.txt" />
         <option value="$PROJECT_DIR$/src/ffff.form" />
         <option value="$PROJECT_DIR$/src/main.kt" />
+        <option value="$PROJECT_DIR$/src/archivo.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="128" />
-    <option name="width" value="1440" />
-    <option name="height" value="773" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -115,7 +104,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,14 +121,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../guerrero-burbano-jenny-sofia" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -201,6 +190,10 @@
       <workItem from="1556660717160" duration="4406000" />
       <workItem from="1556989138833" duration="12186000" />
       <workItem from="1557365752192" duration="2862000" />
+      <workItem from="1557457912081" duration="602000" />
+      <workItem from="1557511164208" duration="4526000" />
+      <workItem from="1557808702174" duration="841000" />
+      <workItem from="1557860975999" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="Commit desde intellig">
       <created>1555101902440</created>
@@ -255,12 +248,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51381000" />
+    <option name="totallyTimeSpent" value="57420000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" weight="0.17919463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.18456376" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -270,7 +263,7 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2776204" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -278,7 +271,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32152975" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3201133" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -292,7 +285,7 @@
       <window_info anchor="right" id="Database" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" visible="true" weight="0.17919463" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972452" weight="0.17919463" />
       <window_info id="Structure" order="1" sideWeight="0.5027548" side_tool="true" weight="0.1396152" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -302,7 +295,7 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2776204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -310,7 +303,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32152975" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3201133" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -345,16 +338,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/ffff.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ffff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -362,8 +351,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ffff.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -381,9 +374,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="165">
+          <caret line="213" column="17" selection-start-line="213" selection-start-column="17" selection-end-line="213" selection-end-column="17" />
           <folding>
+            <element signature="e#0#514#0" expanded="true" />
+            <element signature="e#906#1340#2" />
             <element signature="n#!!block;n#añadirElmento#0" />
             <element signature="n#!!block;n#Plato#0" />
             <element signature="n#!!block;n#muestraContenido#0" />
