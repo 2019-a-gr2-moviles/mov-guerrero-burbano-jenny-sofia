@@ -78,8 +78,6 @@ fun main(args: Array<String>) {
     }
 
 
-    // bw = BufferedWriter(FileWriter(archivo));
-    // bw.write("holaaaa.");
 
     //  b.close()
 
@@ -89,24 +87,16 @@ fun mostrarPlatos(dbPlatos: ArrayList<Plato>):Int{
     val idPlato = JTextField(10)
     val p = JPanel()
     val dtm =
-        DefaultTableModel(arrayOf(arrayOf("Id", "Nombre", "Precio")), arrayOf("Names", "In", "Order"))
+        DefaultTableModel(arrayOf(arrayOf( "Nombre","Tipo", "Precio")), arrayOf("Names", "In", "Order"))
     dbPlatos.forEach{ element ->
-        var arrayTemp= arrayOf(element.idPlato, element.nombre, element.tipo, element.precio)
+        var arrayTemp= arrayOf( element.nombre, element.tipo, element.precio)
         dtm.addRow(arrayTemp)
-
     }
-    dtm.removeRow(0)
     val tabla = JTable(dtm)
     tabla.createDefaultColumnsFromModel()
     tabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     p.add(tabla)
-
-
     JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
-  //  actualizarElmento(dbPlatos, 0)
-    //eliminarElmento(dbPlatos, 0)
-    //println(dbPlatos)
-    //actualizarDB(dbPlatos)
     return tabla.selectedRow
 }
 fun mostrarMenu(dbPlatos: ArrayList<Plato>):Int {
@@ -121,16 +111,7 @@ fun mostrarMenu(dbPlatos: ArrayList<Plato>):Int {
 
     tabla.createDefaultColumnsFromModel()
     p.add(tabla)
-
-
-
-
-
     JOptionPane.showConfirmDialog(null, p, "MENÚ : ", 2);
-
-    //eliminarElmento(dbPlatos, 0)
-    //println(dbPlatos)
-    //actualizarDB(dbPlatos)
     println( "--"+ tabla.selectedColumn+ "g--"+ tabla.selectedRow);
     return tabla.selectedRow
 }
@@ -175,7 +156,7 @@ fun actualizarDB(dbPlatos: ArrayList<Plato>) {
 }
 
 fun eliminarElmento(dbPlatos: ArrayList<Plato>, index: Int) {
-    var platoTemp: Plato = dbPlatos[index]
+    var platoTemp: Plato = dbPlatos[index-1]
     dbPlatos.remove(platoTemp)
     actualizarDB(dbPlatos)
 }
@@ -232,13 +213,13 @@ fun actualizarElmento(dbPlatos: ArrayList<Plato>, index: Int) {
     p.add(JLabel("Precio : "))
     p.add(precio)
 
-    nombre.text = dbPlatos[index].nombre
-    tipo.text = dbPlatos[index].tipo
-    precio.text = dbPlatos[index].precio.toString()
+    nombre.text = dbPlatos[index-1].nombre
+    tipo.text = dbPlatos[index-1].tipo
+    precio.text = dbPlatos[index-1].precio.toString()
     JOptionPane.showConfirmDialog(null, p, "ACTUALIZACIÓN DE PLATO : ", JOptionPane.OK_CANCEL_OPTION);
-    dbPlatos[index].nombre = nombre.text
-    dbPlatos[index].tipo = tipo.text
-    dbPlatos[index].precio = precio.text.toDouble()
+    dbPlatos[index-1].nombre = nombre.text
+    dbPlatos[index-1].tipo = tipo.text
+    dbPlatos[index-1].precio = precio.text.toDouble()
 
     actualizarDB(dbPlatos)
 //    println(familyName.text)
