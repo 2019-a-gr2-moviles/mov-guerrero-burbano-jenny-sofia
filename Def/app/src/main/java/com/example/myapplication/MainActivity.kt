@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +21,17 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+        btn_actividad_dos.setOnClickListener {
+            this.irActividadDos()
+        }
+    }
+    fun irActividadDos(){
+        val intent= Intent(
+            this, Actividad_Dos::class.java
+        )
+        startActivity(intent)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
