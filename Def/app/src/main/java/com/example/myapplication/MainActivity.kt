@@ -31,8 +31,11 @@ class MainActivity : AppCompatActivity() {
         val intent= Intent(
             this, Actividad_Dos::class.java
         )
+        intent.putExtra("nombre", "Sofia")
+        intent.putExtra("edad", 21)
+
         startActivity(intent)
-        finish()
+       // finish()
 
     }
 

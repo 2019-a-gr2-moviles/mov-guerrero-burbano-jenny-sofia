@@ -11,6 +11,10 @@ class Actividad_Dos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actividad__dos)
+        val nombre= intent.getStringExtra("nombre")
+        val edad=intent.getIntExtra("edad",0)
+        println(nombre)
+        println(edad)
         btn_actividad_1.setOnClickListener {
             this.irActividadUno()
 
@@ -22,7 +26,7 @@ class Actividad_Dos : AppCompatActivity() {
             this, MainActivity::class.java
         )
         startActivity(intent)
-        finish()
+       //s finish()
 
 
     }
