@@ -7,12 +7,13 @@ import kotlinx.android.synthetic.main.activity_actividad__dos.*
 import kotlinx.android.synthetic.main.content_main.*
 
 class Actividad_Dos : AppCompatActivity() {
-
+    var primero: Boolean=false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_actividad__dos)
         btn_actividad_1.setOnClickListener {
             this.irActividadUno()
+
         }
 
     }
@@ -21,6 +22,8 @@ class Actividad_Dos : AppCompatActivity() {
             this, MainActivity::class.java
         )
         startActivity(intent)
+        finish()
+
 
     }
 }
