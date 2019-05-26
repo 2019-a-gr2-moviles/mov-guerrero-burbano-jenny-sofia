@@ -9,6 +9,7 @@ import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             this.irActividadDos()
 
         }
+        btn_parselable.setOnClickListener {
+            this.irAParcelable()
+        }
     }
     fun irActividadDos(){
         val intent= Intent(
@@ -34,6 +38,17 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
 
+    }
+    fun irAParcelable(){
+        val intent= Intent(
+            this, parselable:: class.java
+        )
+        val sofia= Usuario("Sofia", 21, Date(), 12.12)
+
+        intent.putExtra("usuario", sofia)
+        val micky= Mascta("Micky", sofia)
+        intent.putExtra("mascota", micky)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

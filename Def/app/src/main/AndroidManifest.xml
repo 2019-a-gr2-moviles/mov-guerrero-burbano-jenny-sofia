@@ -9,6 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".parselable"
+                android:label="@string/title_activity_parselable"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name=".Actividad_Dos">
         </activity>
         <activity
