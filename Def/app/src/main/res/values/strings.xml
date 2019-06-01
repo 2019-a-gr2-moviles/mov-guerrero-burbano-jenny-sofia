@@ -2,4 +2,6 @@
     <string name="app_name">HOLA MUNDO</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_parselable">parselable</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

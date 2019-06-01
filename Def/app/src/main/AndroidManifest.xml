@@ -10,12 +10,23 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".Main2Activity"
+                android:label="@string/title_activity_main2"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ListViewActivity"
+                android:label="@string/title_activity_list_view"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name=".parselable"
                 android:label="@string/title_activity_parselable"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
-        <activity android:name=".Actividad_Dos" android:launchMode="singleTask">
+        <activity
+                android:name=".Actividad_Dos"
+                android:launchMode="singleTask">
         </activity>
         <activity
                 android:name=".MainActivity"

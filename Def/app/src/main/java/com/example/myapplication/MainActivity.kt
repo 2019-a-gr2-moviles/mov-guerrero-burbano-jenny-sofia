@@ -30,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         btn_parselable.setOnClickListener {
             this.irAParcelable()
         }
+        btn_adapter.setOnClickListener {
+            this.irAdapter()
+        }
     }
     fun irActividadDos(){
         val intent= Intent(
@@ -51,6 +54,13 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("usuario", sofia)
         val micky= Mascta("Micky", sofia)
         intent.putExtra("mascota", micky)
+        startActivity(intent)
+    }
+    fun irAdapter(){
+        val intent= Intent(
+            this, ListViewActivity:: class.java
+
+        )
         startActivity(intent)
     }
 
