@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ExamenDef</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="input_nombre">Nombre</string>
+    <string name="title_activity_menu_estudiante">MenuEstudiante</string>
+
 </resources>

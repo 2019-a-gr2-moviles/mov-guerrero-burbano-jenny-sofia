@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
             this, Actividad_Dos::class.java
         )
         startActivity(intent)
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
