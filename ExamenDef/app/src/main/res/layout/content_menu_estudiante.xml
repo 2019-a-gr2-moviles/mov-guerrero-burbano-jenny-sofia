@@ -12,11 +12,15 @@
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="159dp"
-            tools:layout_editor_absoluteX="80dp" android:id="@+id/button3"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/button3" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginBottom="128dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"/>
     <TextView
-            android:text="saludo"
+            android:text="+kdkdkdkkd"
             android:layout_width="46dp"
-            android:layout_height="17dp" tools:layout_editor_absoluteY="109dp"
-            tools:layout_editor_absoluteX="115dp" android:id="@+id/saludo"/>
+            android:layout_height="17dp"
+            tools:layout_editor_absoluteX="115dp" android:id="@+id/saludo" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button3"/>
 </android.support.constraint.ConstraintLayout>
