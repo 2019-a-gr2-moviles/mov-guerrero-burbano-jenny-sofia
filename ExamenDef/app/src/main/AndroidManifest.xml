@@ -10,6 +10,23 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".EditarEstudiante"
+                android:label="@string/title_activity_editar_estudiante"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".CrearEditarEstudiante">
+        </activity>
+        <activity
+                android:name=".GestionEstudiantes"
+                android:label="@string/title_activity_gestion_estudiantes"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".CrearEstudiante"
+                android:label="@string/title_activity_crear_estudiante"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name=".MenuEstudiante"
                 android:label="@string/title_activity_menu_estudiante"
                 android:theme="@style/AppTheme.NoActionBar">

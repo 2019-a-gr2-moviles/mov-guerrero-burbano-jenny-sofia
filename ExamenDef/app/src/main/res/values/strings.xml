@@ -4,5 +4,21 @@
     <string name="btn_entrar">Entrar</string>
     <string name="input_nombre">Nombre</string>
     <string name="title_activity_menu_estudiante">MenuEstudiante</string>
+    <string name="btn_crearEstudiante">Crear Estudiante</string>
+    <string name="btn_gestionEstudiante">Gestionar Estudiante</string>
+    <string name="title_activity_crear_estudiante">CrearEstudiante</string>
+    <string name="input_nombresEstudiante">Nombres</string>
+    <string name="input_apellidosEstudiante">Apellidos</string>
+    <string name="input_semestreActual">Semestre</string>
+    <string name="input_graduado">Graduado</string>
+    <string name="input_fechaNacimiento">Fecha Nacimiento</string>
+    <string name="btn_guardar_estudiante">Guardar</string>
+    <string name="title_activity_gestion_estudiantes">GestionEstudiantes</string>
+    <string name="title_activity_editar_estudiante">EditarEstudiante</string>
+    <string name="btn_actualizar">Actualizar</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="bnt_gestionar_Hijos">Gestión hijos</string>
+    <string name="bnt_crear_hijos">Crear hijos</string>
+
 
 </resources>
