@@ -10,6 +10,16 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".EditMateriaDef"
+                android:label="@string/title_activity_edit_materia_def"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".EditarMateria2"
+                android:label="@string/title_activity_editar_materia2"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
                 android:name=".EditarMateria"
                 android:label="@string/title_activity_editar_materia"
                 android:theme="@style/AppTheme.NoActionBar">

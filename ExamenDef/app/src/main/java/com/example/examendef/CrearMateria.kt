@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_crear_materia.*
 import kotlinx.android.synthetic.main.content_crear_materia.*
-import kotlinx.android.synthetic.main.content_editar_estudiante.*
 import java.util.*
 
 class CrearMateria : AppCompatActivity() {
@@ -36,7 +35,7 @@ class CrearMateria : AppCompatActivity() {
 
             id = MainActivity.contadorMateriaId,
             codigo=inputCodigoMateria.text.toString(),
-            nombre=inputNombreMateria.text.toString(),
+            nombre=inputNameMateria.text.toString(),
             descripcion = inputDescripcion.text.toString(),
             fechaCreacion = Date(),
             numeroHoras = inputHorasSemana.text.toString().toInt(),

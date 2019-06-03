@@ -32,7 +32,7 @@ class GestionMateria : AppCompatActivity() {
     }
     fun seleccionarMateria(posicion:Int){
         val intent= Intent(
-            this, EditarMateria::class.java
+            this, EditMateriaDef::class.java
         )
 
         intent.putExtra("id",posicion )

@@ -33,5 +33,7 @@
     <string name="btnActualizarMateria">Editar Materia</string>
     <string name="btnEliminarMateria">Eliminar materia</string>
     <string name="textFechaCreacion">Fecha creación</string>
+    <string name="title_activity_editar_materia2">EditarMateria2</string>
+    <string name="title_activity_edit_materia_def">EditMateriaDef</string>
 
 </resources>

@@ -5,7 +5,6 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_editar_materia.*
-import kotlinx.android.synthetic.main.activity_gestion_estudiantes2.*
 import kotlinx.android.synthetic.main.content_crear_materia.*
 import java.util.*
 
@@ -14,12 +13,7 @@ class EditarMateria : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_materia)
-        setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
         val idMateria= intent.getIntExtra("id",-1)
         cargarMateria(idMateria)
     }
@@ -41,7 +35,7 @@ class EditarMateria : AppCompatActivity() {
             }
         }
 
-        inputNombreMateria.setText("holaaaaaaaaa")
+        inputNameMateria.setText("holaaaaaaaaa")
         inputCodigoMateria.setText(materiaaux.codigo)
        //.setText(materiaaux.fechaCreacion.toString())
         inputDescripcion.setText(materiaaux.descripcion)
