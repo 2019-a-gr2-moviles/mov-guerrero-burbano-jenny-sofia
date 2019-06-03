@@ -19,6 +19,19 @@
     <string name="btn_eliminar">Eliminar</string>
     <string name="bnt_gestionar_Hijos">Gestión hijos</string>
     <string name="bnt_crear_hijos">Crear hijos</string>
-
+    <string name="title_activity_gestion_materia">Gestion Materia</string>
+    <string name="title_activity_crear_materia">CrearMateria</string>
+    <string name="txt_nombreMateria">Nombre materia</string>
+    <string name="txt_codigoMateria">Código materia</string>
+    <string name="txt_descripcionMateria">Descropción materia</string>
+    <string name="txt_activoMateria">Activa?</string>
+    <string name="txt_fechaCreacionMateria">Fecha creación</string>
+    <string name="txt_numHorasPorSemana">Horas por semana</string>
+    <string name="EstudianteId">estudiante id</string>
+    <string name="btn_guardarHijo">Guardar materia</string>
+    <string name="title_activity_editar_materia">Editar Materia</string>
+    <string name="btnActualizarMateria">Editar Materia</string>
+    <string name="btnEliminarMateria">Eliminar materia</string>
+    <string name="textFechaCreacion">Fecha creación</string>
 
 </resources>

@@ -18,41 +18,73 @@ class EditarEstudiante : AppCompatActivity() {
         setContentView(R.layout.activity_editar_estudiante)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+
         val indiceSeleccionado= intent.getIntExtra("indice",-1)
         if(indiceSeleccionado!=-1){
             CargarEstudiante(indiceSeleccionado)
         }
         btn_eliminar.setOnClickListener {
+
             eliminarEstudiante(indiceSeleccionado)
+
+
         }
         btn_actualizar.setOnClickListener {
             ActualizarEstudiante(indiceSeleccionado)
         }
+        btn_gestion_hijos.setOnClickListener {
+            irMaterias(MainActivity.dbEstudiante[indiceSeleccionado].id)
+        }
+        btn_crearHijos.setOnClickListener {
+            irCrearMateria(MainActivity.dbEstudiante[indiceSeleccionado].id)
+        }
     }
+    fun irMaterias(id:Int){
+        val intent= Intent(
+        this, GestionMateria::class.java
+        )
+        intent.putExtra("id", id )
+        startActivity(intent);
+    }
+    fun irCrearMateria(id:Int){
+        val intent=Intent(
+            this, CrearMateria::class.java
+        )
+        intent.putExtra("id", id )
+        startActivity(intent)
+
+    }
+
     fun ActualizarEstudiante(id:Int){
         MainActivity.dbEstudiante[id].nombres=inputNombre.text.toString()
-        MainActivity.dbEstudiante[id].apellidos=inputNombre.text.toString()
-       val fechaTemp= inputFechaNacimiento.text.toString()
-        val fechaSplit= fechaTemp.split('-')
+        MainActivity.dbEstudiante[id].apellidos=inputApellidos.text.toString()
+        MainActivity.dbEstudiante[id].semestreActual=inputSemestre.text.toString().toInt()
+        if(inputGraduado.isChecked){
+            MainActivity.dbEstudiante[id].graduado=true
+        }else{
+            MainActivity.dbEstudiante[id].graduado=false
+          //  MainActivity.dbEstudiante[id].graduado=false
+        }
 
-        MainActivity.dbEstudiante[id].fechaNacimiento=LocalDate.of(fechaSplit[0].toInt(), fechaSplit[1].toInt(), 3)
-        irGestionEstudiantes()
+
+        irGestionEstudiantes(1)
     }
     fun eliminarEstudiante(id:Int){
         if(id!=-1){
             val tempEst:Estudiante= MainActivity.dbEstudiante[id];
             MainActivity.dbEstudiante.remove(tempEst)
         }
-        irGestionEstudiantes()
+
+
+
+
+        irGestionEstudiantes(2)
     }
-    fun irGestionEstudiantes(){
+    fun irGestionEstudiantes(opcion:Int){
         val intent= Intent(
             this, GestionEstudiantes::class.java
         )
+        intent.putExtra("opcion", opcion )
         startActivity(intent);
     }
 

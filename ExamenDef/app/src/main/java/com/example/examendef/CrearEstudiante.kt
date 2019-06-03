@@ -47,6 +47,7 @@ class CrearEstudiante : AppCompatActivity() {
 
             )
         MainActivity.dbEstudiante.add(estudiante)
+        MainActivity.contadorEstudiateId++
         gestionarEstudiantes()
 
 

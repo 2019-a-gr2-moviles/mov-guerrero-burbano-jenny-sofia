@@ -14,27 +14,57 @@ class MainActivity : AppCompatActivity() {
         var contadorEstudiateId:Int=1
         var contadorMateriaId:Int=1
         var dbEstudiante = ArrayList<Estudiante>()
+        var dbMateria = ArrayList<Materia>()
+
+        fun crearaux(){
+            val estudiante= Estudiante(
+                nombres = "SOFIA",
+                apellidos = "GUERRERO",
+                fechaNacimiento = Date(),
+                semestreActual = 1,
+                graduado = true,
+                id = 0
 
 
+            )
+            val estudiante3= Estudiante(
+                nombres = "SOFIA",
+                apellidos = "GUERRERO",
+                fechaNacimiento = Date(),
+                semestreActual = 1,
+                graduado = true,
+                id = 0
+
+
+            )
+            dbEstudiante.add(estudiante)
+            dbEstudiante.add(estudiante3)
+            var x= dbEstudiante;
+
+            val materia= Materia(
+                id = 0,
+                nombre = "Móviles",
+                codigo = "mov-123",
+                descripcion = "No me gusta android :(",
+                activo = true,
+                fechaCreacion = Date(),
+                numeroHoras = 4,
+                estudianteId = 0
+            )
+            dbMateria.add(materia)
+        }
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
         btn_entrar.setOnClickListener{
+            objetoCompartido.crearaux()
             enviarNombre()
         }
-        val estudiante= Estudiante(
-            nombres = "SOFIA",
-            apellidos = "GUERRERO",
-            fechaNacimiento = Date(),
-            semestreActual = 1,
-            graduado = true,
-            id = 0
-
-
-        )
-        dbEstudiante.add(estudiante)
 
 
     }
