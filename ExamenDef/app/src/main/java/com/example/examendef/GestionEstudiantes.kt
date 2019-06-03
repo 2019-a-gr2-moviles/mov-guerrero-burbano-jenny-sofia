@@ -13,9 +13,7 @@ class GestionEstudiantes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gestion_estudiantes2)
-        Snackbar
-            .make(layout,"posicion: ${MainActivity.nombre}",Snackbar.LENGTH_LONG)
-            .setAction("Action",null).show()
+
         val adapter= ArrayAdapter(this, android.R.layout.simple_list_item_1,MainActivity.dbEstudiante
 
         )

@@ -1,8 +1,10 @@
 package com.example.examendef
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_edit_materia_def.*
 import kotlinx.android.synthetic.main.content_edit_materia_def.*
@@ -67,6 +69,8 @@ class EditMateriaDef : AppCompatActivity() {
             MainActivity.dbMateria[materiaAxu].activo=inputActivo.isChecked
 
         }
+        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia editada exitosamente", Toast.LENGTH_SHORT).show()
+        irGestionMaterias(2);
     }
     fun eliminar(id:Int, materia: Materia){
         var materiaAxu=MainActivity.dbMateria.indexOf(materia)
@@ -74,6 +78,17 @@ class EditMateriaDef : AppCompatActivity() {
             var tempMateria= MainActivity.dbMateria[materiaAxu]
             MainActivity.dbMateria.remove(tempMateria)
         }
+        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia eliminada exitosamente", Toast.LENGTH_SHORT).show()
+        irGestionMaterias(id)
     }
+    fun irGestionMaterias(opcion:Int){
+        val intent= Intent(
+            this, GestionMateria::class.java
+        )
+        intent.putExtra("opcion", opcion )
+        startActivity(intent);
+        finish()
+    }
+
 
 }

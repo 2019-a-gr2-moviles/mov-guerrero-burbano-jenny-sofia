@@ -3,6 +3,7 @@ package com.example.examendef
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast
 import com.example.examendef.R.layout.*
 
 import kotlinx.android.synthetic.main.activity_crear_estudiante.*
@@ -48,6 +49,7 @@ class CrearEstudiante : AppCompatActivity() {
             )
         MainActivity.dbEstudiante.add(estudiante)
         MainActivity.contadorEstudiateId++
+        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
         gestionarEstudiantes()
 
 

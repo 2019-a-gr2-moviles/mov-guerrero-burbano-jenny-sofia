@@ -3,7 +3,7 @@
     <string name="app_name">ExamenDef</string>
     <string name="EstudianteId">student id</string>
     <string name="bnt_crear_hijos">create subject</string>
-    <string name="bnt_gestionar_Hijos">manage subject</string>
+    <string name="bnt_gestionar_Hijos">subject managment</string>
     <string name="btnActualizarMateria">edit subject</string>
     <string name="btnEliminarMateria">delete subject</string>
     <string name="btn_actualizar">update</string>
@@ -22,14 +22,18 @@
     <string name="title_activity_crear_materia">create subject</string>
     <string name="title_activity_editar_estudiante">edit student</string>
     <string name="title_activity_editar_materia">edit subject</string>
-    <string name="title_activity_gestion_estudiantes">manage students</string>
-    <string name="title_activity_gestion_materia">manage subjects</string>
+    <string name="title_activity_gestion_estudiantes">students managment</string>
+    <string name="title_activity_gestion_materia">subject managment</string>
     <string name="title_activity_main2">main</string>
     <string name="title_activity_menu_estudiante">menu</string>
-    <string name="txt_activoMateria">on?</string>
+    <string name="txt_activoMateria">active?</string>
     <string name="txt_codigoMateria">subject code</string>
     <string name="txt_descripcionMateria">subject description</string>
     <string name="txt_fechaCreacionMateria">creation date</string>
     <string name="txt_nombreMateria">subject name</string>
     <string name="txt_numHorasPorSemana">hours by week</string>
+    <string name="title_activity_editar_materia2">Edit subject</string>
+    <string name="title_activity_edit_materia_def">Edit subject</string>
+    <string name="input_nombre">Name</string>
+    <string name="input_nombresEstudiante">Names</string>
 </resources>

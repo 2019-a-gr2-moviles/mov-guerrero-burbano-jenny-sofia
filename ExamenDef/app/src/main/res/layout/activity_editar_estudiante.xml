@@ -5,7 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EditarEstudiante" android:id="@+id/layouEditar">
+        tools:context=".EditarEstudiante" android:id="@+id/layouEditar"
+        android:background="@drawable/ic_launcher_background">
 
     <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"

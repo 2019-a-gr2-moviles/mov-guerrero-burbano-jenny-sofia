@@ -15,17 +15,18 @@
             android:id="@+id/inputGraduado" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/inputSemestre"/>
+            app:layout_constraintTop_toBottomOf="@+id/inputSemestre"
+    />
     <Button
             android:text="@string/btn_actualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_actualizar" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginBottom="72dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/inputGraduado" app:layout_constraintVertical_bias="0.298"
-            app:layout_constraintHorizontal_bias="0.195"/>
+            android:id="@+id/btn_actualizar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="68dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_crearHijos" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputGraduado"/>
     <TextView
             android:text="@string/input_nombresEstudiante"
             android:layout_width="wrap_content"
@@ -101,29 +102,30 @@
             android:text="@string/btn_eliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_eliminar" app:layout_constraintStart_toEndOf="@+id/btn_actualizar"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.407" app:layout_constraintTop_toBottomOf="@+id/inputGraduado"
-            android:layout_marginTop="52dp"/>
+            android:id="@+id/btn_eliminar"
+            app:layout_constraintStart_toEndOf="@+id/btn_actualizar"
+            android:layout_marginStart="68dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_gestion_hijos" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputGraduado"/>
     <Button
             android:text="@string/bnt_gestionar_Hijos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_gestion_hijos"
-            app:layout_constraintTop_toBottomOf="@+id/btn_actualizar" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="64dp"
-            app:layout_constraintVertical_bias="0.204" app:layout_constraintEnd_toStartOf="@+id/btn_crearHijos"
-            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_crearHijos" android:layout_marginStart="8dp"/>
     <Button
             android:text="@string/bnt_crear_hijos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_crearHijos"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="64dp" android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="64dp" android:layout_marginBottom="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.156"/>
+    />
 
 </android.support.constraint.ConstraintLayout>

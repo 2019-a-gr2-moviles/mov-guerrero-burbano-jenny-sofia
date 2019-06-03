@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_editar_estudiante.*
 import kotlinx.android.synthetic.main.content_editar_estudiante.*
@@ -66,7 +67,7 @@ class EditarEstudiante : AppCompatActivity() {
           //  MainActivity.dbEstudiante[id].graduado=false
         }
 
-
+        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
         irGestionEstudiantes(1)
     }
     fun eliminarEstudiante(id:Int){
@@ -74,6 +75,7 @@ class EditarEstudiante : AppCompatActivity() {
             val tempEst:Estudiante= MainActivity.dbEstudiante[id];
             MainActivity.dbEstudiante.remove(tempEst)
         }
+        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante eliminado correctamente", Toast.LENGTH_SHORT).show()
 
 
 
@@ -86,6 +88,7 @@ class EditarEstudiante : AppCompatActivity() {
         )
         intent.putExtra("opcion", opcion )
         startActivity(intent);
+        finish()
     }
 
     fun CargarEstudiante(id: Int){
