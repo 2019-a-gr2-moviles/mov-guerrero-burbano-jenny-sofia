@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal" android:id="@+id/linear_layout">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1">
-        <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="41dp" android:id="@+id/txt_contacto"/>
-        <TextView
-                android:text="TextView"
-                android:layout_width="match_parent"
-                android:layout_height="70dp" android:id="@+id/txt_contenidoMensaje"/>
-    </LinearLayout>
+    <TextView
+            android:text="TextView"
+            android:layout_width="300dp"
+            android:layout_height="41dp" android:id="@+id/txt_contacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="64dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" android:id="@+id/txt_contenidoMensaje"
+            app:layout_constraintTop_toBottomOf="@+id/txt_contacto" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"/>
     <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
-            android:layout_height="40dp" android:id="@+id/txt_numeroMensajes" android:layout_weight="0.05"/>
-</LinearLayout>
+            android:layout_height="40dp" android:id="@+id/txt_numeroMensajes" android:layout_weight="0.05"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/txt_contacto"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_contenidoMensaje"/>
+</android.support.constraint.ConstraintLayout>

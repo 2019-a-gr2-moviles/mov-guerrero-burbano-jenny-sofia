@@ -1,5 +1,7 @@
 package com.example.a02debermensajesrv
 
+import android.graphics.Color
+import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,12 +21,13 @@ RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
         var contactoTextView: TextView
         var contenidoMensajeTextView: TextView
         var numeroMensajesTextView: TextView
+        lateinit var layout: ConstraintLayout
 
         init {
             contactoTextView = view.findViewById(R.id.txt_contacto) as TextView
             contenidoMensajeTextView = view.findViewById(R.id.txt_contenidoMensaje) as TextView
             numeroMensajesTextView = view.findViewById(R.id.txt_numeroMensajes) as TextView
-            val layout = view.findViewById(R.id.linear_layout) as LinearLayout
+            layout = view.findViewById(R.id.linear_layout) as ConstraintLayout
             layout.setOnClickListener{
                 Log.i("Recycler-view", "Layout presionado")
             }
@@ -45,6 +48,12 @@ RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
 
     override fun onBindViewHolder(myViewHolder: AdaptadorMensaje.MyViewHolder, p1: Int) {
         val mensaje= listaMensajes[p1]
+        if(p1%2==0){
+            myViewHolder.layout.setBackgroundColor(Color.rgb(234,244,244))
+
+        }else{
+            myViewHolder.layout.setBackgroundColor(Color.rgb(246,255,248))
+        }
         myViewHolder.contactoTextView.text= mensaje.contacto
         myViewHolder.contenidoMensajeTextView.text= mensaje.contenidoMensaje
         myViewHolder.numeroMensajesTextView.text= mensaje.numeroMensajes.toString()
