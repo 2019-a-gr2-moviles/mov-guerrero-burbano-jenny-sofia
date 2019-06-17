@@ -10,17 +10,23 @@
         tools:context=".MenuEstudiante">
 
     <Button
-            android:text="Button"
+            android:text="@string/btn_gestionEstudiante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button3" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/btn_gestionEstudiante" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginBottom="128dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.394"/>
-    <TextView
-            android:text="+kdkdkdkkd"
-            android:layout_width="46dp"
-            android:layout_height="17dp"
-            tools:layout_editor_absoluteX="115dp" android:id="@+id/saludo" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/button3"/>
+            android:layout_marginBottom="456dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0"/>
+    <Button
+            android:text="@string/btn_crearEstudiante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_crearEstudiante"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btn_gestionEstudiante"/>
 </android.support.constraint.ConstraintLayout>
