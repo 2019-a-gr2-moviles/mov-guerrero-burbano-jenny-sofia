@@ -13,10 +13,29 @@ class MainActivity : AppCompatActivity() {
         btn_irRecybleView.setOnClickListener {
             irRecycleView()
         }
+        btn_intentRespuesta.setOnClickListener {
+            irIntentRespuesta()
+        }
     }
     fun irRecycleView(){
         val intent= Intent(
             this, RecycleViewActivity::class.java
+        )
+
+        startActivity(intent);
+        finish()
+    }
+    fun irIntentRespuesta(){
+        val intent= Intent(
+            this, IntentRespuestaActivity::class.java
+        )
+
+        startActivity(intent);
+        finish()
+    }
+    fun irResultadoPropio(){
+        val intent= Intent(
+            this, IntentRespuestaActivity::class.java
         )
 
         startActivity(intent);
