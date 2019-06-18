@@ -51,6 +51,7 @@ RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
         if(p1%2==0){
             myViewHolder.layout.setBackgroundColor(Color.rgb(234,244,244))
 
+
         }else{
             myViewHolder.layout.setBackgroundColor(Color.rgb(246,255,248))
         }

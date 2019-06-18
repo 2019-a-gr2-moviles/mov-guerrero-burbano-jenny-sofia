@@ -14,6 +14,7 @@ class RecyclerViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
+        this.supportActionBar?.hide()
         val lista = arrayListOf<Mensaje>()
 //        val recycler_view= rv_personas
 //        val actividad= this
@@ -22,6 +23,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         lista.add(Mensaje("Carmen", 1, "Hola Carmen"))
         lista.add(Mensaje("Aniii", 4 ,"Hola Anaee"))
         lista.add(Mensaje("Carmeneee", 1, "Hola Carmen222"))
+        lista.add(Mensaje("Carmeneee3", 1, "Hola Carmen222"))
+        lista.add(Mensaje("Carmeneee4", 1, "Hola Carmen222"))
         iniciarRecycleView(lista, this, rv_mensajes)
 
     }
