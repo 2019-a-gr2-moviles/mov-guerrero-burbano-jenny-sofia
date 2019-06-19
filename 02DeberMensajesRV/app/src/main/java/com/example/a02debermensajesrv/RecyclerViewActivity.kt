@@ -18,16 +18,17 @@ class RecyclerViewActivity : AppCompatActivity() {
         val lista = arrayListOf<Mensaje>()
 //        val recycler_view= rv_personas
 //        val actividad= this
-        lista.add(Mensaje("Sofia", 10, "Hola sofía" ))
-        lista.add(Mensaje("Ana", 4 ,"Hola Ana"))
-        lista.add(Mensaje("Carmen", 1, "Hola Carmen"))
-        lista.add(Mensaje("Aniii", 4 ,"Hola Anaee"))
-        lista.add(Mensaje("Carmeneee", 1, "Hola Carmen222"))
-        lista.add(Mensaje("Carmeneee3", 1, "Hola Carmen222"))
-        lista.add(Mensaje("Carmeneee4", 1, "Hola Carmen222"))
+        lista.add(Mensaje("Sofia", 10, "Hola sofía", false ))
+        lista.add(Mensaje("Ana", 4 ,"Hola Ana", true))
+        lista.add(Mensaje("Carmen", 1, "Hola Carmen", false))
+        lista.add(Mensaje("Aniii", 4 ,"Hola Anaee", false))
+        lista.add(Mensaje("Carmeneee", 1, "Hola Carmen222", false))
+        lista.add(Mensaje("Carmeneee3", 1, "Hola Carmen222", false))
+        lista.add(Mensaje("Carmeneee4", 1, "Hola Carmen222", false))
         iniciarRecycleView(lista, this, rv_mensajes)
 
     }
+
     fun iniciarRecycleView(lista: List<Mensaje>, actividad:RecyclerViewActivity,recycler_view: RecyclerView){
         val adaptadorMensaje= AdaptadorMensaje(lista, actividad, recycler_view)
         rv_mensajes.adapter=adaptadorMensaje
