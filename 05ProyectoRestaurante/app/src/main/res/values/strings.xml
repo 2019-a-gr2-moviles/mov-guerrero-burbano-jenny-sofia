@@ -5,4 +5,7 @@
     <string name="txtNombre">Nombre</string>
     <string name="txtPrecio">Precio</string>
     <string name="txtDescripcion">Descripcion</string>
+    <string name="txtAdminPlatos">Administrar platos</string>
+    <string name="txtAdminCombos">Administrar combos</string>
+    <string name="txtNuevoPlato">Nuevo plato</string>
 </resources>
