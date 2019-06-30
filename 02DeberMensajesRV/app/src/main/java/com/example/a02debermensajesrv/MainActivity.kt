@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun irIntentRespuesta(){
         val intent= Intent(
-            this, RecyclerViewActivity::class.java
+            this, ConexionHTTPClient::class.java
         )
         startActivity(intent);
     }
