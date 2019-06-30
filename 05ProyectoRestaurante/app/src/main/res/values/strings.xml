@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">05ProyectoRestaurante</string>
+    <string name="verMenu">Ver menú</string>
+    <string name="soyAdministrador">Soy administrador</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtPrecio">Precio</string>
+    <string name="txtDescripcion">Descripcion</string>
+</resources>
