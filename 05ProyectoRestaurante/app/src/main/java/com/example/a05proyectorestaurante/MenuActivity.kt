@@ -14,6 +14,8 @@ import android.widget.Toast
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
+import com.github.kittinunf.fuel.httpPut
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.dialog.*
@@ -31,16 +33,20 @@ class MenuActivity : AppCompatActivity() {
             btn_nuevoPlato.visibility= View.INVISIBLE
         }else{
             btn_nuevoPlato.setOnClickListener {
-                withEditText(Plato("", "",0.0), 1)
+                withEditText(Plato(-1,"", "",0.0), 1)
             }
         }
-        listaPlatos.add(Plato("Oja", "rico", 1.2))
-        listaPlatos.add(Plato("Oja22", "ricoa", 3.2))
+        //si la opcion es 2 es para adminstrador
+        cargar(opcion)
 
+
+
+
+    }
+    fun cargar(opcion: Int){
+        val url = "http://192.168.200.5:1337/plato"
         var lista= listOf<Plato>()
 
-
-        val url = "http://192.168.200.5:1337/plato"
         url
             .httpGet()
             .responseString { request, response, result ->
@@ -52,26 +58,78 @@ class MenuActivity : AppCompatActivity() {
                     is Result.Success -> {
                         val data = result.get()
                         Log.i("http", "Data: ${data}")
-
                         var platoParseada = Klaxon().parseArray<Plato>(data)
                         lista=platoParseada!!
-                        //iniciarRecycleView(platoParseada!!, this, rv_plato)
                         runOnUiThread {
                             iniciarRecycleView(lista, this, rv_plato, opcion)
                         }
 
+                    }
+                }
+            }
+    }
 
-                        platoParseada?.forEach{
-                            Log.i("http", it.nombre)
-                        }
+    fun platos() {
+        val url = "http://192.168.200.5:1337/plato"
+        val (request, response, result) =url
+            .httpGet().response()
+        result.get()
+
+    }
+    fun guardarPlato(plato: Plato){
+        val url = "http://192.168.200.5:1337/plato"
+        val bodyJson = """
+  {
+    "nombre": "${plato.nombre}",
+    "descripcion" : "${plato.descripcion}",
+    "precio": ${plato.precio}
+  }
+"""
+        url
+            .httpPost().body(bodyJson)
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "Error: ${ex.message}")
+                        Log.i("http", "rEQUEST: ${request}")
+                        Log.i("http", "Error: ${ex.message}")
+                        Log.i("http", "Error: ${ex.message}")
+                    }
+                    is Result.Success -> {
+
+                        Log.i("http", "TODO BIIIEN")
                     }
                 }
             }
 
-
-
     }
-    fun guardarPlato(url:String){
+    fun editarPlato(plato: Plato){
+        val url = "http://192.168.200.5:1337/plato/${plato.id}"
+        val bodyJson = """
+  {
+    "nombre": "${plato.nombre}",
+    "descripcion" : "${plato.descripcion}",
+    "precio": ${plato.precio}
+  }
+"""
+        url
+            .httpPut().body(bodyJson)
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "Error: ${ex.message}")
+                        Log.i("http", "rEQUEST: ${request}")
+                        Log.i("http", "Error: ${ex.message}")
+                        Log.i("http", "Error: ${ex.message}")
+                    }
+                    is Result.Success -> {
+
+                        Log.i("http", "TODO BIIIEN")
+                    }
+                }
+            }
 
     }
     fun iniciarRecycleView(lista: List<Plato>, actividad:MenuActivity,recycler_view: RecyclerView, opcion: Int){
@@ -96,12 +154,22 @@ class MenuActivity : AppCompatActivity() {
         descripcion.setText(plato.descripcion.toString())
         precio.setText(plato.precio.toString())
 
+
         builder.setView(dialogLayout)
 
         builder.setPositiveButton("Guardar") { dialogInterface, i ->
             if(opcion==1){
-                val (request, response, result) = Fuel.get("http://192.168.200.5:1337/plato")
-                    .response()
+
+                plato.nombre=nombre.text.toString()
+                plato.descripcion= descripcion.text.toString()
+                plato.precio= precio.text.toString().toDouble()
+                guardarPlato(plato)
+            }else{
+
+                plato.nombre=nombre.text.toString()
+                plato.descripcion= descripcion.text.toString()
+                plato.precio= precio.text.toString().toDouble()
+                editarPlato(plato)
             }
             Toast.makeText(applicationContext, "EditText is " + nombre.text.toString(), Toast.LENGTH_SHORT).show()
 
