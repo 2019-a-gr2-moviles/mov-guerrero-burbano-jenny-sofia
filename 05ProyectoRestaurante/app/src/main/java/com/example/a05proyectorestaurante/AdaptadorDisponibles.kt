@@ -3,12 +3,15 @@ package com.example.a05proyectorestaurante
 import android.support.constraint.ConstraintLayout
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 
 class AdaptadorDisponibles(private val listaPlatos: List<Plato>,
 
                            private val contexto: MenuActivity,
                            private val recyclerView: RecyclerView, private val opcion: Int) : RecyclerView.Adapter<AdaptadorDisponibles.MyViewHolder>() {
+
+
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var nombrePlato: TextView
         var descripcionPlato: TextView
@@ -29,5 +32,15 @@ class AdaptadorDisponibles(private val listaPlatos: List<Plato>,
             }
         }
     }
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
+    override fun getItemCount(): Int {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
