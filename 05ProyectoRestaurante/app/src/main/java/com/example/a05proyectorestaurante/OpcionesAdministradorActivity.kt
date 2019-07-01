@@ -13,10 +13,20 @@ class OpcionesAdministradorActivity : AppCompatActivity() {
         btn_adminPlato.setOnClickListener {
             irActividadMenu(2)
         }
+        btn_adminCombo.setOnClickListener {
+            irActividadMenuCombo(2)
+        }
     }
     fun irActividadMenu(opcion: Int){
         val intent= Intent(
             this, MenuActivity::class.java
+        )
+        intent.putExtra("opcion", opcion )
+        startActivity(intent);
+    }
+    fun irActividadMenuCombo(opcion: Int){
+        val intent= Intent(
+            this, MenuComboActivity::class.java
         )
         intent.putExtra("opcion", opcion )
         startActivity(intent);

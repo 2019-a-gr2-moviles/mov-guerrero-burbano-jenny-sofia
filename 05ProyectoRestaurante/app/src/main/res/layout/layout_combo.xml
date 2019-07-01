@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent" android:id="@+id/layout_combo">
+    <TextView
+            android:text="TextView"
+            android:layout_width="79dp"
+            android:layout_height="38dp"
+
+            android:background="@drawable/text_lines"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/txtc_nombre"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="62dp"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:background="@drawable/text_lines"
+
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/txtc_precio"
+            app:layout_constraintStart_toEndOf="@+id/txtc_descripcion"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="93dp"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:background="@drawable/text_lines"
+
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/txtc_descripcion"
+            app:layout_constraintStart_toEndOf="@+id/txtc_nombre"/>
+    <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="41dp" app:srcCompat="@drawable/trash"
+            android:id="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtc_precio"/>
+    <ImageButton
+            android:layout_width="39dp"
+            android:layout_height="38dp" app:srcCompat="@drawable/lapiz"
+            android:id="@+id/imageButton4" app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="41dp" app:srcCompat="@drawable/go"
+            android:id="@+id/imageButton5" app:layout_constraintStart_toEndOf="@+id/imageButton4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
