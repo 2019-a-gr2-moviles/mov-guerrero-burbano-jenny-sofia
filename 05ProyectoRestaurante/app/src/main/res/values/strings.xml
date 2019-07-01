@@ -8,4 +8,6 @@
     <string name="txtAdminPlatos">Administrar platos</string>
     <string name="txtAdminCombos">Administrar combos</string>
     <string name="txtNuevoPlato">Nuevo plato</string>
+    <string name="txtPlatosDisponibles">Platos disponibles</string>
+    <string name="txtPlatosSeleccionados">Platos seleccionados</string>
 </resources>
