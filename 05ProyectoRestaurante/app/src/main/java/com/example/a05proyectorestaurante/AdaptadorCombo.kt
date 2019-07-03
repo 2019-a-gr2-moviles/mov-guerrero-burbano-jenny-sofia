@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 
 class AdaptadorCombo(private val listaCombos: List<Combo>,
@@ -18,14 +19,23 @@ private val recyclerView: RecyclerView, private val opcion:Int): RecyclerView.Ad
         var nombreCombo: TextView
         var descripcionCombo: TextView
         var precioCombo: TextView
+        var botonVerCombo: ImageButton
         var layout: ConstraintLayout
         var indice: Int
+        var idSeleccionado: Int
         init {
             nombreCombo= view.findViewById(R.id.txtc_nombre) as TextView
             descripcionCombo= view.findViewById(R.id.txtc_descripcion) as TextView
             precioCombo= view.findViewById(R.id.txtc_precio) as TextView
+            botonVerCombo = view.findViewById(R.id.btn_verCombo) as ImageButton
             layout = view.findViewById(R.id.layout_combo) as ConstraintLayout
             indice= -1
+            idSeleccionado=-1
+            botonVerCombo.setOnClickListener {
+                contexto.irGestionCombo(idSeleccionado)
+            }
+
+
 
         }
     }
@@ -50,6 +60,7 @@ private val recyclerView: RecyclerView, private val opcion:Int): RecyclerView.Ad
         myViewHolder.descripcionCombo.text = combo.descripcion
         myViewHolder.precioCombo.text = combo.precio.toString()
         myViewHolder.indice = position
+        myViewHolder.idSeleccionado=combo.id!!
     }
 
 

@@ -3,7 +3,7 @@
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
-                                             android:layout_height="match_parent" android:id="@+id/layout_combo">
+                                             android:layout_height="wrap_content" android:id="@+id/layout_combo">
     <TextView
             android:text="TextView"
             android:layout_width="79dp"
@@ -46,7 +46,7 @@
     <ImageButton
             android:layout_width="40dp"
             android:layout_height="41dp" app:srcCompat="@drawable/go"
-            android:id="@+id/imageButton5" app:layout_constraintStart_toEndOf="@+id/imageButton4"
+            android:id="@+id/btn_verCombo" app:layout_constraintStart_toEndOf="@+id/imageButton4"
             app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
