@@ -12,13 +12,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".PruebaImagenesAcitvity">
+        </activity>
         <activity android:name=".GestionComboActivity">
         </activity>
-        <activity android:name=".MenuComboActivity">
+        <activity
+                android:name=".MenuComboActivity"
+                android:windowSoftInputMode="adjustResize">
         </activity>
         <activity android:name=".OpcionesAdministradorActivity">
         </activity>
-        <activity android:name=".MenuActivity">
+        <activity
+                android:name=".MenuActivity"
+                android:windowSoftInputMode="adjustResize">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -27,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <meta-data
+                android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+                android:value="ocr"/>
     </application>
 
 </manifest>

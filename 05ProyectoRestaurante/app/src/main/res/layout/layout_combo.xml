@@ -35,18 +35,18 @@
     <ImageButton
             android:layout_width="30dp"
             android:layout_height="41dp" app:srcCompat="@drawable/trash"
-            android:id="@+id/imageButton3"
+            android:id="@+id/btn_eliminarCombo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtc_precio"/>
     <ImageButton
             android:layout_width="39dp"
             android:layout_height="38dp" app:srcCompat="@drawable/lapiz"
-            android:id="@+id/imageButton4" app:layout_constraintStart_toEndOf="@+id/imageButton3"
+            android:id="@+id/btn_editarCombo" app:layout_constraintStart_toEndOf="@+id/btn_eliminarCombo"
             app:layout_constraintTop_toTopOf="parent"/>
     <ImageButton
             android:layout_width="40dp"
             android:layout_height="41dp" app:srcCompat="@drawable/go"
-            android:id="@+id/btn_verCombo" app:layout_constraintStart_toEndOf="@+id/imageButton4"
+            android:id="@+id/btn_verCombo" app:layout_constraintStart_toEndOf="@+id/btn_editarCombo"
             app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

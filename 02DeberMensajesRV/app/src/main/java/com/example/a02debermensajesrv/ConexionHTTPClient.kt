@@ -1,12 +1,13 @@
 package com.example.a02debermensajesrv
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import java.lang.Exception
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 
 class ConexionHTTPClient : AppCompatActivity() {
 
@@ -98,5 +99,33 @@ class ConexionHTTPClient : AppCompatActivity() {
                     }
                 }
             }
+        crear()
     }
+    fun crear(){
+        var url= "http://172.29.41.111:1337/empresa"
+        val parametrosCreateEmpres = listOf(
+            "nombre" to "Manticore laba 2",
+            "apellido" to "Guerrero",
+            "sueldo" to 12.20,
+            "casado" to false,
+            "hijos" to null
+        )
+        url.httpPost(parametrosCreateEmpres).responseString{
+            request, response, result ->
+            when(result){
+                is Failure -> {
+                    val error= result.getException()
+                    Log.i("http", "ERROR ${error}")
+                }
+                is Success -> {
+                    val empresaString = result.get()
+                    Log.i("http", "$empresaString")
+
+                }
+            }
+        }
+
+
+    }
+
 }

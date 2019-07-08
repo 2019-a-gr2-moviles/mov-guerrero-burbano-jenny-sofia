@@ -1,7 +1,7 @@
 package com.example.a02debermensajesrv
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,10 +13,19 @@ class MainActivity : AppCompatActivity() {
         btn_mensajes.setOnClickListener {
             irIntentRespuesta()
         }
+        btn_map.setOnClickListener {
+            irMaps()
+        }
     }
     fun irIntentRespuesta(){
         val intent= Intent(
             this, ConexionHTTPClient::class.java
+        )
+        startActivity(intent);
+    }
+    fun irMaps(){
+        val intent= Intent(
+            this, MapsActivity::class.java
         )
         startActivity(intent);
     }

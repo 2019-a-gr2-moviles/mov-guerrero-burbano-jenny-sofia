@@ -2,24 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="011a4c11-a528-4362-bc7e-e8f8d16c27ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Prueba/Prueba.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/Numero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/Numero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/UsuarioKT$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/UsuarioKT$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../01-kotlin/out/production/ejemplo/main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/MapsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_maps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/release/res/values/google_maps_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/PruebaImagenesAcitvity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/activity_prueba_imagenes_acitvity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/androidTest/java/com/example/a02debermensajesrv/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/androidTest/java/com/example/a02debermensajesrv/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/AdaptadorMensaje.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/AdaptadorMensaje.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/ConexionHTTPClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/ConexionHTTPClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/Main2Activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/Main2Activity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/RecyclerViewActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/java/com/example/a02debermensajesrv/RecyclerViewActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_conexion_httpclient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_conexion_httpclient.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_recycler_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/activity_recycler_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/content_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/content_main2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/layout/layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02DeberMensajesRV/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../02DeberMensajesRV/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/AdaptadorCombo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/AdaptadorCombo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/AdaptadorMenu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/AdaptadorMenu.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/Combo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/Combo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/GestionComboActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/GestionComboActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/MenuActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/MenuActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/MenuComboActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/java/com/example/a05proyectorestaurante/MenuComboActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/activity_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/activity_menu_combo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/activity_menu_combo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/layout_combo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/layout_combo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/layout_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../05ProyectoRestaurante/app/src/main/res/layout/layout_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,18 +95,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,7 +123,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -110,7 +131,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deber1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../05ProyectoRestaurante" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -163,16 +184,17 @@
     <option name="totallyTimeSpent" value="3195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info id="Resources Explorer" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25313947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -185,6 +207,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -201,15 +224,15 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/ProyectoIndividual.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoIndividual.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main2.kt">
       <provider selected="true" editor-type-id="text-editor" />

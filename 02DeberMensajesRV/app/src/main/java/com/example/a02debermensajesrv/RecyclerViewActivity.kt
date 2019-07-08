@@ -1,11 +1,11 @@
 package com.example.a02debermensajesrv
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 
@@ -29,12 +29,12 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     }
 
-    fun iniciarRecycleView(lista: List<Mensaje>, actividad:RecyclerViewActivity,recycler_view: RecyclerView){
+    fun iniciarRecycleView(lista: List<Mensaje>, actividad:RecyclerViewActivity,recycler_view: androidx.recyclerview.widget.RecyclerView){
         val adaptadorMensaje= AdaptadorMensaje(lista, actividad, recycler_view)
         rv_mensajes.adapter=adaptadorMensaje
-        rv_mensajes.itemAnimator = DefaultItemAnimator()
+        rv_mensajes.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
         //Nos falta el layout manager
-        rv_mensajes.layoutManager= LinearLayoutManager(this,LinearLayout.VERTICAL,false)
+        rv_mensajes.layoutManager= androidx.recyclerview.widget.LinearLayoutManager(this, LinearLayout.VERTICAL, false)
         adaptadorMensaje.notifyDataSetChanged()
     }
 //    fun irIntentRespuesta(){

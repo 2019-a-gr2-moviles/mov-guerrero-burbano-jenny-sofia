@@ -20,6 +20,8 @@ private val recyclerView: RecyclerView, private val opcion:Int): RecyclerView.Ad
         var descripcionCombo: TextView
         var precioCombo: TextView
         var botonVerCombo: ImageButton
+        var botonEditCombo: ImageButton
+        var botonEliminarCombo: ImageButton
         var layout: ConstraintLayout
         var indice: Int
         var idSeleccionado: Int
@@ -28,11 +30,19 @@ private val recyclerView: RecyclerView, private val opcion:Int): RecyclerView.Ad
             descripcionCombo= view.findViewById(R.id.txtc_descripcion) as TextView
             precioCombo= view.findViewById(R.id.txtc_precio) as TextView
             botonVerCombo = view.findViewById(R.id.btn_verCombo) as ImageButton
+            botonEditCombo = view.findViewById(R.id.btn_editarCombo) as ImageButton
+            botonEliminarCombo = view.findViewById(R.id.btn_eliminarCombo) as ImageButton
             layout = view.findViewById(R.id.layout_combo) as ConstraintLayout
             indice= -1
             idSeleccionado=-1
             botonVerCombo.setOnClickListener {
                 contexto.irGestionCombo(idSeleccionado)
+            }
+            botonEliminarCombo.setOnClickListener {
+                contexto.eliminarCombo(idSeleccionado)
+            }
+            botonEditCombo.setOnClickListener {
+                contexto.editarGuardarCombo(listaCombos[indice], 2)
             }
 
 

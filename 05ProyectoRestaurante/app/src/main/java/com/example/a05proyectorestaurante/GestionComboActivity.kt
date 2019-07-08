@@ -25,6 +25,7 @@ class GestionComboActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gestion_combo)
+        this.supportActionBar?.hide()
         val idCombo = intent.getIntExtra("indice", -1)
         idComboCO=idCombo
         var lista = ArrayList<Plato>()

@@ -9,29 +9,32 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.beust.klaxon.Klaxon
-import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.httpDelete
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.fuel.httpPut
 import com.github.kittinunf.result.Result
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.dialog.*
-import kotlinx.android.synthetic.main.layout_menu.*
 
 
 class MenuActivity : AppCompatActivity() {
     companion object objetoCompartido {
-        var url = "http://172.29.49.230:1337"
+        var url = "http://172.29.41.111:1337"
+        var listaPlatos = listOf<Plato>()
+        var opcion:Int =-1
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        val opcion = intent.getIntExtra("opcion", -1)
+        this.supportActionBar?.hide()
+        opcion = intent.getIntExtra("opcion", -1)
         var listaPlatos = arrayListOf<Plato>()
+        btnBuscarPlato.setOnClickListener {
+            buscar()
+        }
         if (opcion == 1) {
             btn_nuevoPlato.visibility = View.INVISIBLE
         } else {
@@ -44,10 +47,20 @@ class MenuActivity : AppCompatActivity() {
 
 
     }
+    fun buscar(){
+        var aux=listaPlatos.filter {
+            it.nombre.contains(input_busquedaPlato.text.toString())
+
+        }
+        iniciarRecycleView(aux, this, rv_plato, opcion)
+
+    }
 
     fun cargar(opcion: Int) {
         val url = "${objetoCompartido.url}/plato"
         var lista = listOf<Plato>()
+        var listaPlatos2 = listOf<Plato>()
+        iniciarRecycleView(listaPlatos2, this, rv_plato, opcion)
 
         url
             .httpGet()
@@ -60,8 +73,10 @@ class MenuActivity : AppCompatActivity() {
                     is Result.Success -> {
                         val data = result.get()
                         Log.i("http", "Data: ${data}")
+
                         var platoParseada = Klaxon().parseArray<Plato>(data)
                         lista = platoParseada!!
+                        listaPlatos=lista
                         runOnUiThread {
                             iniciarRecycleView(lista, this, rv_plato, opcion)
                         }
@@ -71,13 +86,7 @@ class MenuActivity : AppCompatActivity() {
             }
     }
 
-    fun platos() {
-        val url = "${objetoCompartido.url}/plato"
-        val (request, response, result) = url
-            .httpGet().response()
-        result.get()
 
-    }
 
     fun guardarPlato(plato: Plato) {
         val url = "${objetoCompartido.url}/plato"
@@ -97,6 +106,9 @@ class MenuActivity : AppCompatActivity() {
                         Log.i("http", "rEQUEST: ${request}")
                     }
                     is Result.Success -> {
+                        runOnUiThread {
+                            cargar(opcion)
+                        }
 
                         Log.i("http", "TODO BIIIEN")
                     }
@@ -123,6 +135,9 @@ class MenuActivity : AppCompatActivity() {
 
                     }
                     is Result.Success -> {
+                        runOnUiThread {
+                            cargar(opcion)
+                        }
 
                         Log.i("http", "TODO BIIIEN")
                     }
@@ -130,7 +145,56 @@ class MenuActivity : AppCompatActivity() {
             }
 
     }
+    fun eliminarPlato(idPlato: Int){
+        val url = "${MenuActivity.url}/plato?id=${idPlato}"
+        val urlRelacion = "${MenuActivity.url}/historialComboPlato?idPlato=${idPlato}"
 
+        var lista = listOf<Plato>()
+        urlRelacion
+            .httpGet()
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "Error: ${ex.message}")
+                    }
+                    is Result.Success -> {
+                        val data = result.get()
+                        var platoParseada = Klaxon().parseArray<Historial>(data)
+                        var x=platoParseada
+                        if(platoParseada!!.size!=0){
+                            runOnUiThread {
+                                Toast.makeText(applicationContext, "NO SE PUEDE ELIMINAR ", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        if(platoParseada!!.size==0){
+                            url
+                                .httpDelete()
+                                .responseString { request, response, result ->
+                                    when (result) {
+                                        is Result.Failure -> {
+                                            val ex = result.getException()
+                                            Log.i("http", "Error: ${ex.message}")
+                                        }
+                                        is Result.Success -> {
+
+                                            runOnUiThread {
+                                                cargar(opcion)
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                        }
+
+                    }
+                }
+            }
+
+
+
+    }
     fun iniciarRecycleView(lista: List<Plato>, actividad: MenuActivity, recycler_view: RecyclerView, opcion: Int) {
         val adaptadorPlato = AdaptadorMenu(lista, actividad, recycler_view, opcion)
         rv_plato.adapter = adaptadorPlato
@@ -159,13 +223,11 @@ class MenuActivity : AppCompatActivity() {
 
         builder.setPositiveButton("Guardar") { dialogInterface, i ->
             if (opcion == 1) {
-
                 plato.nombre = nombre.text.toString()
                 plato.descripcion = descripcion.text.toString()
                 plato.precio = precio.text.toString().toDouble()
                 guardarPlato(plato)
             } else {
-
                 plato.nombre = nombre.text.toString()
                 plato.descripcion = descripcion.text.toString()
                 plato.precio = precio.text.toString().toDouble()

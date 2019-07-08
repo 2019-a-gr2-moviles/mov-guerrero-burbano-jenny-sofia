@@ -40,7 +40,7 @@
                 android:inputType="textPersonName"
                 android:text="Name"
                 android:ems="10"
-                android:id="@+id/input_busqueda"
+                android:id="@+id/input_busquedaPlato"
                 android:layout_marginStart="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 android:background="@drawable/borde_busqueda"
@@ -48,19 +48,20 @@
         <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@drawable/search"
-                android:id="@+id/imageButton"
+
                 android:background="@color/colorBackground2"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/imageView"
-                app:layout_constraintStart_toEndOf="@+id/input_busqueda" android:layout_marginStart="8dp"
-                android:layout_marginTop="48dp" app:layout_constraintHorizontal_bias="0.161"/>
+                app:layout_constraintStart_toEndOf="@+id/input_busquedaPlato" android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp" app:layout_constraintHorizontal_bias="0.161"
+                android:id="@+id/btnBuscarPlato"/>
         <TextView
                 android:text="@string/txtNombre"
                 android:layout_width="57dp"
                 android:layout_height="15dp"
                 android:id="@+id/txt_nombre" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="12dp"
-                app:layout_constraintTop_toBottomOf="@+id/input_busqueda"
+                app:layout_constraintTop_toBottomOf="@+id/input_busquedaPlato"
                 android:layout_marginStart="16dp" app:layout_constraintBottom_toTopOf="@+id/rv_plato"
                 app:layout_constraintVertical_bias="0.0" android:layout_marginBottom="10dp"/>
         <TextView
@@ -69,7 +70,7 @@
                 android:layout_height="17dp"
                 android:id="@+id/textView2"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/input_busqueda"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/input_busquedaPlato"
                 app:layout_constraintBottom_toBottomOf="@+id/Descripcion"
                 app:layout_constraintVertical_bias="1.0" app:layout_constraintStart_toEndOf="@+id/Descripcion"
                 android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.735"
@@ -79,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:id="@+id/Descripcion"
-                android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/input_busqueda"
+                android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/input_busquedaPlato"
                 app:layout_constraintStart_toEndOf="@+id/txt_nombre" android:layout_marginStart="44dp"
         />
         <android.support.v7.widget.RecyclerView

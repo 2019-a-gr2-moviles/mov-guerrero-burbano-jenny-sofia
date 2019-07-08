@@ -1,8 +1,8 @@
 package com.example.a02debermensajesrv
 
 import android.graphics.Color
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +13,10 @@ import org.w3c.dom.Text
 class AdaptadorMensaje(private val listaMensajes: List<Mensaje>,
 
                        private val contexto: RecyclerViewActivity,
-private val recyclerView: RecyclerView) :
-RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
+private val recyclerView: androidx.recyclerview.widget.RecyclerView
+) :
+androidx.recyclerview.widget.RecyclerView.Adapter<AdaptadorMensaje.MyViewHolder>() {
+    inner class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view){
         var contactoTextView: TextView
         var contenidoMensajeTextView: TextView
         var numeroMensajesTextView: TextView
