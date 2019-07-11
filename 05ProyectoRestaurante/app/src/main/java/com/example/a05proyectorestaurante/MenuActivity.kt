@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
     companion object objetoCompartido {
-        var url = "http://172.29.41.111:1337"
+        var url = "http://172.29.64.221:1337"
         var listaPlatos = listOf<Plato>()
         var opcion:Int =-1
     }
@@ -121,11 +121,11 @@ class MenuActivity : AppCompatActivity() {
         val url = "${objetoCompartido.url}/plato/${plato.id}"
         val bodyJson = """
   {
-    "nombre": "${plato.nombre}",
-    "descripcion" : "${plato.descripcion}",
-    "precio": ${plato.precio}
-  }
-"""
+            "nombre": "${plato.nombre}",
+            "descripcion" : "${plato.descripcion}",
+            "precio": ${plato.precio}
+          }
+        """
         url.httpPut().body(bodyJson)
             .responseString { request, response, result ->
                 when (result) {
