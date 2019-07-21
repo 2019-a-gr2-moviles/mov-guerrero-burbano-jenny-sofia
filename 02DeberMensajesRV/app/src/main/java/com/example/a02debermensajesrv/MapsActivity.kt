@@ -105,7 +105,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCamera
         )
     }
     fun moverCamara(latLng: LatLng, zoom: Float = 10f){
-        
+
         mMap.moveCamera(
             CameraUpdateFactory.newLatLngZoom(latLng, zoom)
         )

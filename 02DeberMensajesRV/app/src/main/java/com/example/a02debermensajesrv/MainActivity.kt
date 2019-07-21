@@ -16,10 +16,28 @@ class MainActivity : AppCompatActivity() {
         btn_map.setOnClickListener {
             irMaps()
         }
+        btn_ciclo.setOnClickListener {
+            irActividadCiloDevida()
+        }
+        fragmentos.setOnClickListener {
+            irFragmentos()
+        }
     }
     fun irIntentRespuesta(){
         val intent= Intent(
             this, ConexionHTTPClient::class.java
+        )
+        startActivity(intent);
+    }
+    fun irFragmentos(){
+        val intent= Intent(
+            this, FragmentosActivity::class.java
+        )
+        startActivity(intent);
+    }
+    fun irActividadCiloDevida(){
+        val intent= Intent(
+            this, CicloDeVidaActivity::class.java
         )
         startActivity(intent);
     }

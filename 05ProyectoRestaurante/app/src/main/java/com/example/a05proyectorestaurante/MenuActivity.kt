@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
     companion object objetoCompartido {
-        var url = "http://172.29.64.221:1337"
+        var url = "http://172.29.64.87:1337"
         var listaPlatos = listOf<Plato>()
         var opcion:Int =-1
     }
