@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             this, MenuEstudiante::class.java
         )
         startActivity(intent);
+
     }
     fun mapas(){
 

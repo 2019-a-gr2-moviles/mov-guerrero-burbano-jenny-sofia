@@ -34,13 +34,16 @@ class MenuEstudiante : AppCompatActivity() {
             this, CrearEstudiante::class.java
         )
         startActivity(intent);
+        finish()
     }
 
     fun gestionarEstudiantes(){
         val intent= Intent(
             this, GestionEstudiantes::class.java
         )
+
         startActivity(intent);
+
     }
 
 }

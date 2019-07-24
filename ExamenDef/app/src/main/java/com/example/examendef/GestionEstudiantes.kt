@@ -65,6 +65,7 @@ class GestionEstudiantes : AppCompatActivity() {
         intent.putExtra("indice", indice)
 
         startActivity(intent);
+        finish()
     }
 
 

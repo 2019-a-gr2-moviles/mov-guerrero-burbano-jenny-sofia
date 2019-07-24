@@ -20,7 +20,7 @@ import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_gestion_materia.*
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
     private lateinit var mMap: GoogleMap
@@ -30,7 +30,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        idEstudiante = intent.getIntExtra("idEstudiante",-1)
+        idEstudiante = intent.getIntExtra("idEstudiante", -1)
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -51,11 +51,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
 //        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
         mMap.setOnMarkerClickListener {
-            Log.i("maps",it!!.title.toString())
+            Log.i("maps", it!!.title.toString())
             true
         }
     }
-    fun cargarMaterias(idEstudiante:Int){
+
+    fun cargarMaterias(idEstudiante: Int) {
         val url = "${MainActivity.url}/materia?estudianteId=${idEstudiante}"
         var lista = listOf<Estudiante>()
         var listaLibros = ArrayList<Estudiante>()
@@ -66,7 +67,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
         url
             .httpGet()
             .responseString { request, response, result ->
-                when(result){
+                when (result) {
                     is Result.Failure -> {
                         val ex = result.getException()
                         Log.i("http", "Errorssss: ${ex.message} --- ${request}")
@@ -78,22 +79,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
                         Log.i("http", "TODO BIEN: ${data}")
                         var libroParseada = Klaxon().parseArray<Materia>(data)
 
-                        MainActivity.dbMateria=libroParseada!!
-                        libroParseada.forEach {
-                            runOnUiThread {
+                        MainActivity.dbMateria = libroParseada!!
+                        runOnUiThread {
+                            libroParseada.forEach {
+
                                 val sydney = LatLng(it.latitud.toDouble(), it.longitud.toDouble())
                                 mMap.addMarker(MarkerOptions().position(sydney).title("${it.nombre},${it.id}"))
                                 mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
                                 mMap.setOnMarkerClickListener {
-                                    Log.i("maps",it!!.title.toString())
-                                    var stringNombreMarker= it!!.title.toString()
-                                    val listaSeparado= stringNombreMarker.split(",")
+                                    Log.i("maps", it!!.title.toString())
+                                    var stringNombreMarker = it!!.title.toString()
+                                    val listaSeparado = stringNombreMarker.split(",")
                                     seleccionarMateria(listaSeparado[1].toInt(), idEstudiante)
 
                                     true
                                 }
 
                             }
+                            moverCamara(LatLng(libroParseada!!.get(0).latitud.toDouble(),libroParseada!!.get(0).longitud.toDouble()))
+
                         }
 
 
@@ -101,13 +105,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback{
                 }
             }
     }
-    fun seleccionarMateria(posicion:Int, idEstudiante: Int){
-        val intent= Intent(
+    fun moverCamara(latLng: LatLng, zoom: Float = 10f){
+
+        mMap.moveCamera(
+            CameraUpdateFactory.newLatLngZoom(latLng, zoom)
+        )
+
+    }
+
+    fun seleccionarMateria(posicion: Int, idEstudiante: Int) {
+        val intent = Intent(
             this, EditMateriaDef::class.java
         )
 
-        intent.putExtra("id",posicion )
+        intent.putExtra("id", posicion)
         intent.putExtra("idEstudiante", idEstudiante)
+        intent.putExtra("opcion", 1)
 
         startActivity(intent);
     }

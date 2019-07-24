@@ -85,6 +85,7 @@ class CrearMateria : AppCompatActivity() {
         )
         intent.putExtra("id", id)
         startActivity(intent);
+        finish()
     }
     fun irGestionMaterias(opcion:Int){
         val intent= Intent(

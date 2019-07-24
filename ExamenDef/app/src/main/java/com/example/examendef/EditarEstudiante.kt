@@ -6,6 +6,7 @@ import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast
+import com.github.kittinunf.fuel.httpDelete
 import com.github.kittinunf.fuel.httpPut
 import com.github.kittinunf.result.Result
 
@@ -29,7 +30,7 @@ class EditarEstudiante : AppCompatActivity() {
         }
         btn_eliminar.setOnClickListener {
 
-            eliminarEstudiante(indiceSeleccionado)
+            eliminarEstudiante(MainActivity.dbEstudiante[indiceSeleccionado].id)
 
 
         }
@@ -68,6 +69,7 @@ class EditarEstudiante : AppCompatActivity() {
         )
         intent.putExtra("id", id )
         startActivity(intent)
+        finish()
 
     }
 
@@ -102,10 +104,14 @@ class EditarEstudiante : AppCompatActivity() {
                         Log.i("http", "rEQUEST: ${request}")
                     }
                     is Result.Success -> {
+                        runOnUiThread {
+                            Toast.makeText(this, "Estimado: ${MainActivity.nombre},Estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
+                            irGestionEstudiantes(2)
+                        }
 
 
                         Log.i("http", "TODO BIIIEN")
-                        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
+
                       // irGestionEstudiantes(1)
                     }
                 }
@@ -115,14 +121,34 @@ class EditarEstudiante : AppCompatActivity() {
     }
     fun eliminarEstudiante(id:Int){
         if(id!=-1){
-//
+            val url = "${MainActivity.url}/estudiante/${id}"
+            var lista = listOf<Estudiante>()
+            var listaLibros = ArrayList<Estudiante>()
+            url
+                .httpDelete()
+                .responseString { request, response, result ->
+                    when (result) {
+                        is Result.Failure -> {
+                            val ex = result.getException()
+                            Log.i("http", "Error: ${ex.message}")
+                        }
+                        is Result.Success -> {
+                            runOnUiThread {
+                                Toast.makeText(this, "Estimado: ${MainActivity.nombre},Estudiante eliminado exitosamente", Toast.LENGTH_SHORT).show()
+                                irGestionEstudiantes(2)
+                            }
+
+
+                        }
+                    }
+                }
         }
         Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante eliminado correctamente", Toast.LENGTH_SHORT).show()
 
 
 
 
-        irGestionEstudiantes(2)
+
     }
     fun irGestionEstudiantes(opcion:Int){
         val intent= Intent(

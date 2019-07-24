@@ -70,6 +70,7 @@ class GestionMateria : AppCompatActivity() {
         intent.putExtra("idEstudiante", idEstudiante)
 
         startActivity(intent);
+        finish()
     }
 
 

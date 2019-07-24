@@ -3,10 +3,12 @@ package com.example.examendef
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast
 import com.beust.klaxon.Klaxon
+import com.github.kittinunf.fuel.httpDelete
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.fuel.httpPut
@@ -24,15 +26,17 @@ class EditMateriaDef : AppCompatActivity() {
         setContentView(R.layout.activity_edit_materia_def)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+
         val idMateria= intent.getIntExtra("id",-1)
         val idEstudiante= intent.getIntExtra("idEstudiante",-1)
+        val opcion= intent.getIntExtra("opcion",-1)
+        if(opcion==1){
+            btn_Actualizar.visibility= View.INVISIBLE
+            btn_Eliminar.visibility= View.INVISIBLE
+        }
        cargarMateriaInfo(idMateria)
         btn_Eliminar.setOnClickListener {
-           // eliminar(idMateria, materiaTemp)
+            eliminar(idMateria, idEstudiante)
         }
         btn_Actualizar.setOnClickListener {
             actualizar(idMateria, idEstudiante)
@@ -141,24 +145,45 @@ class EditMateriaDef : AppCompatActivity() {
                 }
             }
 
-        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia creada exitosamente", Toast.LENGTH_SHORT).show()
-        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia editada exitosamente", Toast.LENGTH_SHORT).show()
-        irGestionMaterias(2);
+
+
     }
-    fun eliminar(id:Int, materia: Materia){
-        var materiaAxu=MainActivity.dbMateria.indexOf(materia)
-        if(materiaAxu!=-1) {
-            var tempMateria= MainActivity.dbMateria[materiaAxu]
+    fun eliminar(id:Int, idEstudiante: Int){
+
+        if(id!=-1) {
+            if(id!=-1){
+                val url = "${MainActivity.url}/materia/${id}"
+                var lista = listOf<Estudiante>()
+                var listaLibros = ArrayList<Estudiante>()
+                url
+                    .httpDelete()
+                    .responseString { request, response, result ->
+                        when (result) {
+                            is Result.Failure -> {
+                                val ex = result.getException()
+                                Log.i("http", "Error: ${ex.message}")
+                            }
+                            is Result.Success -> {
+                                runOnUiThread {
+                                    Toast.makeText(this, "Estimado: ${MainActivity.nombre},Estudiante eliminado exitosamente", Toast.LENGTH_SHORT).show()
+                                    irGestionMaterias(2, idEstudiante)
+                                }
+
+
+                            }
+                        }
+                    }
+            }
 
         }
-        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia eliminada exitosamente", Toast.LENGTH_SHORT).show()
-        irGestionMaterias(id)
+
     }
-    fun irGestionMaterias(opcion:Int){
+    fun irGestionMaterias(opcion:Int, idEstudiante: Int){
         val intent= Intent(
             this, GestionMateria::class.java
         )
         intent.putExtra("opcion", opcion )
+        intent.putExtra("id",  idEstudiante )
         startActivity(intent);
         finish()
     }
