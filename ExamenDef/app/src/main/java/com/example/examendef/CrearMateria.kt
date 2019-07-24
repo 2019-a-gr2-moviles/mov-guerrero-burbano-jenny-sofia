@@ -2,12 +2,16 @@ package com.example.examendef
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast
+import com.github.kittinunf.fuel.httpPost
 
 import kotlinx.android.synthetic.main.activity_crear_materia.*
 import kotlinx.android.synthetic.main.content_crear_materia.*
+import kotlinx.android.synthetic.main.content_edit_materia_def.*
+import com.github.kittinunf.result.Result
 import java.util.*
 
 class CrearMateria : AppCompatActivity() {
@@ -32,29 +36,48 @@ class CrearMateria : AppCompatActivity() {
 
     fun crearMateria(id:Int){
 
-        val materia= Materia(
+        var semestre = false
 
-            id = MainActivity.contadorMateriaId,
-            codigo=inputCodigoMateria.text.toString(),
-            nombre=inputNameMateria.text.toString(),
-            descripcion = inputDescripcion.text.toString(),
-            fechaCreacion = Date(),
-            numeroHoras = inputHorasSemana.text.toString().toInt(),
-            estudianteId = id,
-            activo = true
+        val url = "${MainActivity.objetoCompartido.url}/materia"
+        var date= Date()
+        val bodyJson = """
+              {
+                "nombre": "${inputNameMateriac.text.toString()}",
+                "codigo": "${inputCodigoMateriac.text.toString()}",
+                "descripcion" : "${inputDescripcionc.text.toString()}",
+                "activo": ${inputEstaActivo.isChecked},
+                "fechaCreacion": "${date}",
+                "numeroHorasPorSemana": ${inputHorasSemanasCrear.text},
+                "latitud": "${inputLatitudc.text}",
+                "longitud": "${inputLongitudCrear.text}",
+                "estudianteId": ${id}
 
-        )
-        if(inputEstaActivo.isChecked){
-            materia.activo=true
-        }else{
-            materia.activo=false
-        }
+              }
+            """
+        url
+            .httpPost().body(bodyJson)
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "rEQUEST: ${ex}")
+                    }
+                    is Result.Success -> {
 
-        MainActivity.dbMateria.add(materia)
-        MainActivity.contadorMateriaId++
+
+                        Log.i("http", "TODO BIIIEN")
+//                        Toast.makeText(
+//                            this,
+//                            "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+                        // irGestionEstudiantes(1)
+                    }
+                }
+            }
         gestionarMaterias(id)
         Toast.makeText(this, "Estimado: ${MainActivity.nombre}, materia creada exitosamente", Toast.LENGTH_SHORT).show()
-        irGestionMaterias(2)
+        //irGestionMaterias(2)
     }
     fun gestionarMaterias(id:Int){
         val intent= Intent(

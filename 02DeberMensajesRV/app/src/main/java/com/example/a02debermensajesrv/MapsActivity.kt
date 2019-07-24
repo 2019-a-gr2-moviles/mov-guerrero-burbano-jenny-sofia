@@ -1,6 +1,7 @@
 package com.example.a02debermensajesrv
 
 import android.content.pm.PackageManager
+import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,7 +16,11 @@ import com.google.android.gms.maps.model.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCameraIdleListener,
     GoogleMap.OnCameraMoveListener, GoogleMap.OnCameraMoveStartedListener,
-    GoogleMap.OnPolylineClickListener,GoogleMap.OnPolygonClickListener{
+    GoogleMap.OnPolylineClickListener,GoogleMap.OnPolygonClickListener, GoogleMap.OnMyLocationClickListener{
+    override fun onMyLocationClick(p0: Location) {
+       Log.i("locationmap", p0.toString())
+    }
+
     override fun onPolylineClick(p0: Polyline?) {
         Log.i("maps", "CLICK POLILINE")
     }
@@ -29,7 +34,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCamera
     }
 
     override fun onCameraMove() {
-        Log.i("maps", "move")
+        Log.i("maps", "move ${mMap.myLocation.latitude}")
+        val poliOligini=mMap
+            .addPolygon(
+                PolygonOptions()
+                    .clickable(true)
+                    .add(
+                        LatLng(-0.209431, -78.490078),
+                        LatLng(-0.208734, -78.488951),
+                        LatLng(-0.209431, -78.488286),
+                        LatLng(-0.210085, -78.489745)
+                    )
+
+            )
+        poliOligini.fillColor= -0xc771c4
     }
 
     override fun onCameraMoveStarted(p0: Int) {
@@ -43,6 +61,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCamera
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
         solicitarPermisosLocalizacion()
+        //mMap.myLocation.altitude
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -73,28 +92,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnCamera
         anadirMarcado(foch,titulo)
         moverCamara(foch, 17f)
         establecerconfiguracionMapa(mMap)
-        val poliLineaUno= googleMap.addPolyline(
-            PolylineOptions()
-                .clickable(true).add(
-                    LatLng(-0.210462, -78.493948),
-                    LatLng(-0.208218, -78.490163),
-                    LatLng(-0.208583, -78.488940),
-                    LatLng(-0.209377, -78.490303)
-                )
-        )
-        val poliOligini=googleMap
-            .addPolygon(
-                PolygonOptions()
-                    .clickable(true)
-                    .add(
-                        LatLng(-0.209431, -78.490078),
-                        LatLng(-0.208734, -78.488951),
-                        LatLng(-0.209431, -78.488286),
-                        LatLng(-0.210085, -78.489745)
-                    )
-
-            )
-        poliOligini.fillColor= -0xc771c4
+//        val poliLineaUno= googleMap.addPolyline(
+//            PolylineOptions()
+//                .clickable(true).add(
+//                    LatLng(-0.210462, -78.493948),
+//                    LatLng(-0.208218, -78.490163),
+//                    LatLng(-0.208583, -78.488940),
+//                    LatLng(-0.209377, -78.490303)
+//                )
+//        )
+//        val poliOligini=googleMap
+//            .addPolygon(
+//                PolygonOptions()
+//                    .clickable(true)
+//                    .add(
+//                        LatLng(-0.209431, -78.490078),
+//                        LatLng(-0.208734, -78.488951),
+//                        LatLng(-0.209431, -78.488286),
+//                        LatLng(-0.210085, -78.489745)
+//                    )
+//
+//            )
+//        poliOligini.fillColor= -0xc771c4
 
     }
     fun anadirMarcado(latLng: LatLng, titulo:String ){

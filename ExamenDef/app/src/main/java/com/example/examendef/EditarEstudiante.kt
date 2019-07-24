@@ -2,9 +2,12 @@ package com.example.examendef
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Toast
+import com.github.kittinunf.fuel.httpPut
+import com.github.kittinunf.result.Result
 
 import kotlinx.android.synthetic.main.activity_editar_estudiante.*
 import kotlinx.android.synthetic.main.content_editar_estudiante.*
@@ -31,7 +34,7 @@ class EditarEstudiante : AppCompatActivity() {
 
         }
         btn_actualizar.setOnClickListener {
-            ActualizarEstudiante(indiceSeleccionado)
+            ActualizarEstudiante(MainActivity.dbEstudiante[indiceSeleccionado].id)
         }
         btn_gestion_hijos.setOnClickListener {
             irMaterias(MainActivity.dbEstudiante[indiceSeleccionado].id)
@@ -39,12 +42,24 @@ class EditarEstudiante : AppCompatActivity() {
         btn_crearHijos.setOnClickListener {
             irCrearMateria(MainActivity.dbEstudiante[indiceSeleccionado].id)
         }
+        btn_irMapaMaterias.setOnClickListener {
+            mapas(MainActivity.dbEstudiante[indiceSeleccionado].id)
+        }
     }
     fun irMaterias(id:Int){
         val intent= Intent(
         this, GestionMateria::class.java
         )
         intent.putExtra("id", id )
+        startActivity(intent);
+    }
+    fun mapas(idEstudiante:Int){
+
+
+        val intent= Intent(
+            this, MapsActivity::class.java
+        )
+        intent.putExtra("idEstudiante", idEstudiante )
         startActivity(intent);
     }
     fun irCrearMateria(id:Int){
@@ -57,23 +72,50 @@ class EditarEstudiante : AppCompatActivity() {
     }
 
     fun ActualizarEstudiante(id:Int){
-        MainActivity.dbEstudiante[id].nombres=inputNombre.text.toString()
-        MainActivity.dbEstudiante[id].apellidos=inputApellidos.text.toString()
-        MainActivity.dbEstudiante[id].semestreActual=inputSemestre.text.toString().toInt()
+
+        var semestre=false
         if(inputGraduado.isChecked){
-            MainActivity.dbEstudiante[id].graduado=true
+
+            semestre=true
         }else{
-            MainActivity.dbEstudiante[id].graduado=false
+
+            semestre=false
           //  MainActivity.dbEstudiante[id].graduado=false
         }
+        val url = "${MainActivity.objetoCompartido.url}/estudiante/${id}"
+        val bodyJson = """
+              {
+                "nombres": "${inputNombre.text.toString()}",
+                "apellidos": "${inputApellidos.text.toString()}",
+                "fechaNacimiento" : "${inputFechaNacimiento.text.toString()}",
+                "semestreActual": ${inputSemestre.text.toString()},
+                "graduado": ${semestre}
 
-        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
-        irGestionEstudiantes(1)
+              }
+            """
+        url
+            .httpPut().body(bodyJson)
+            .responseString { request, response, result ->
+                when (result) {
+                    is Result.Failure -> {
+                        val ex = result.getException()
+                        Log.i("http", "rEQUEST: ${request}")
+                    }
+                    is Result.Success -> {
+
+
+                        Log.i("http", "TODO BIIIEN")
+                        Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante editado exitosamente", Toast.LENGTH_SHORT).show()
+                      // irGestionEstudiantes(1)
+                    }
+                }
+            }
+
+
     }
     fun eliminarEstudiante(id:Int){
         if(id!=-1){
-            val tempEst:Estudiante= MainActivity.dbEstudiante[id];
-            MainActivity.dbEstudiante.remove(tempEst)
+//
         }
         Toast.makeText(this, "Estimado: ${MainActivity.nombre}, estudiante eliminado correctamente", Toast.LENGTH_SHORT).show()
 

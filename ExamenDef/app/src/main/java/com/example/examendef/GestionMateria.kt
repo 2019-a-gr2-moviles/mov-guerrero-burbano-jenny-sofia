@@ -1,10 +1,15 @@
 package com.example.examendef
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import com.beust.klaxon.Klaxon
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.result.Result
+import kotlinx.android.synthetic.main.activity_gestion_estudiantes2.*
 import kotlinx.android.synthetic.main.activity_gestion_materia.*
 
 class GestionMateria : AppCompatActivity() {
@@ -13,29 +18,56 @@ class GestionMateria : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gestion_materia)
         val idEstudianteSeleccionado= intent.getIntExtra("id",-1)
-        var arregloFiltrado =MainActivity.dbMateria.filter {
-                value->value.estudianteId==idEstudianteSeleccionado
-        }
-
-        val adapter= ArrayAdapter(this, android.R.layout.simple_list_item_1,arregloFiltrado
-
-        )
-        lv_Materias.adapter=adapter;
         val opcion= intent.getIntExtra("opcion",-1)
-        lv_Materias.onItemClickListener=
-            AdapterView.OnItemClickListener { parent, view, position, id ->
-                var index=arregloFiltrado[position].id
-                seleccionarMateria(index)
-            }
+        cargarMaterias(idEstudianteSeleccionado)
+
+
 
 
     }
-    fun seleccionarMateria(posicion:Int){
+     fun cargarMaterias(idEstudiante:Int){
+         val url = "${MainActivity.url}/materia?estudianteId=${idEstudiante}"
+         var lista = listOf<Estudiante>()
+         var listaLibros = ArrayList<Estudiante>()
+         url
+             .httpGet()
+             .responseString { request, response, result ->
+                 when(result){
+                     is Result.Failure -> {
+                         val ex = result.getException()
+                         Log.i("http", "Errorssss: ${ex.message} --- ${request}")
+                     }
+                     is Result.Success -> {
+                         val data = result.get()
+
+
+                         var libroParseada = Klaxon().parseArray<Materia>(data)
+
+                         MainActivity.dbMateria=libroParseada!!
+
+                         runOnUiThread {
+                             val adapter= ArrayAdapter(this, android.R.layout.simple_list_item_1,libroParseada)
+                             lv_Materias.adapter=adapter;
+
+                             lv_Materias.onItemClickListener=
+                                 AdapterView.OnItemClickListener { parent, view, position, id ->
+                                     var index=libroParseada[position].id
+                                     seleccionarMateria(index, idEstudiante)
+                                 }
+
+                         }
+
+                     }
+                 }
+             }
+     }
+    fun seleccionarMateria(posicion:Int, idEstudiante: Int){
         val intent= Intent(
             this, EditMateriaDef::class.java
         )
 
         intent.putExtra("id",posicion )
+        intent.putExtra("idEstudiante", idEstudiante)
 
         startActivity(intent);
     }

@@ -35,5 +35,10 @@
     <string name="textFechaCreacion">Fecha creación</string>
     <string name="title_activity_editar_materia2">EditarMateria2</string>
     <string name="title_activity_edit_materia_def">EditMateriaDef</string>
+    <string name="longitud">longitud</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="latitud">latitud</string>
+    <string name="verHijosMapa">Ver mapa de materias</string>
+
 
 </resources>

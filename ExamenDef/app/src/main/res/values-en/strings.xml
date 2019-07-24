@@ -36,4 +36,7 @@
     <string name="title_activity_edit_materia_def">Edit subject</string>
     <string name="input_nombre">Name</string>
     <string name="input_nombresEstudiante">Names</string>
+    <string name="latitud">latitud</string>
+    <string name="longitud">longitud</string>
+    <string name="verHijosMapa">View subject map</string>
 </resources>

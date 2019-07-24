@@ -1,7 +1,7 @@
 package com.example.examendef
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_crear_estudiante.*
@@ -11,47 +11,15 @@ class MainActivity : AppCompatActivity() {
     companion object objetoCompartido
     {
         var nombre:String="prueba"
+        var url = "http://192.168.200.5:1337";
         var contadorEstudiateId:Int=1
         var contadorMateriaId:Int=1
-        var dbEstudiante = ArrayList<Estudiante>()
-        var dbMateria = ArrayList<Materia>()
+        var dbEstudiante = listOf<Estudiante>()
+        var dbMateria = listOf<Materia>()
 
         fun crearaux(){
-            val estudiante= Estudiante(
-                nombres = "SOFIA",
-                apellidos = "GUERRERO",
-                fechaNacimiento = Date(),
-                semestreActual = 1,
-                graduado = true,
-                id = 0
 
 
-            )
-            val estudiante3= Estudiante(
-                nombres = "SOFIA",
-                apellidos = "GUERRERO",
-                fechaNacimiento = Date(),
-                semestreActual = 1,
-                graduado = true,
-                id = 0
-
-
-            )
-            dbEstudiante.add(estudiante)
-            dbEstudiante.add(estudiante3)
-            var x= dbEstudiante;
-
-            val materia= Materia(
-                id = 0,
-                nombre = "Móviles",
-                codigo = "mov-123",
-                descripcion = "No me gusta android :(",
-                activo = true,
-                fechaCreacion = Date(),
-                numeroHoras = 4,
-                estudianteId = 0
-            )
-            dbMateria.add(materia)
         }
 
     }
@@ -65,6 +33,9 @@ class MainActivity : AppCompatActivity() {
             objetoCompartido.crearaux()
             enviarNombre()
         }
+        button2.setOnClickListener {
+            mapas()
+        }
 
 
     }
@@ -73,6 +44,14 @@ class MainActivity : AppCompatActivity() {
         objetoCompartido.nombre=input_Nombre.text.toString();
         val intent= Intent(
             this, MenuEstudiante::class.java
+        )
+        startActivity(intent);
+    }
+    fun mapas(){
+
+
+        val intent= Intent(
+            this, MapsActivity::class.java
         )
         startActivity(intent);
     }
