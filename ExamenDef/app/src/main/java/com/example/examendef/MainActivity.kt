@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     companion object objetoCompartido
     {
         var nombre:String="prueba"
-        var url = "http://192.168.200.5:1337";
+        var url = "http://192.168.43.38:1337";
         var contadorEstudiateId:Int=1
         var contadorMateriaId:Int=1
         var dbEstudiante = listOf<Estudiante>()
